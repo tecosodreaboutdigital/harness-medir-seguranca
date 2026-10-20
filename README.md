@@ -100,7 +100,7 @@ Escolha uma câmera real da sua operação e siga os passos. Não precisa instal
 
 - [skills/README.md](skills/README.md): catálogo, instalação e regras comuns
 - [mapear-camera](skills/mapear-camera/SKILL.md): entrevista e contrato de tarefa com nível de controle
-- [triagem-de-alerta](skills/triagem-de-alerta/SKILL.md): o prompt com harness, no formato A a E
+- [triagem-de-alerta](skills/triagem-de-alerta/SKILL.md): o prompt com harness, com o quadro visual de 3 passos primeiro e o formato de 1 a 6
 - [revisar-nivel-de-controle](skills/revisar-nivel-de-controle/SKILL.md): auditoria de uma operação já ligada
 - [integracao-vms](skills/integracao-vms/SKILL.md): alertas do sistema de gravação por ONVIF, REST ou webhook, somente leitura, com servidor mock
 - [integracao-controle-de-acesso](skills/integracao-controle-de-acesso/SKILL.md): webhook somente leitura de controle de acesso e RH, com notas de LGPD para biometria

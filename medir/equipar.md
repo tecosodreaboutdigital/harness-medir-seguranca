@@ -27,7 +27,7 @@ A regra de dimensionamento vale aqui mais do que em qualquer outro passo: **o ha
 
 ## Exemplos no CFTV
 
-- **Formato curto e fixo.** Hipótese mais provável e duas alternativas, incluindo falso positivo; o que verificar nos próximos 60 segundos; quem decide e quando escalar; o que registrar; o que não sabe. No máximo 120 palavras.
+- **O essencial primeiro, em formato fixo.** Primeiro, um quadro visual com os 3 passos do que o operador faz agora (1️⃣ 2️⃣ 3️⃣, uma linha curta cada, com emoji e seta); depois, hipótese mais provável e duas alternativas, incluindo falso positivo; o que verificar nos próximos 60 segundos; quem decide e quando escalar; o que registrar; o que não sabe. No máximo 240 palavras. O quadro é texto, então funciona igual em qualquer assistente e não depende de gerar imagem.
 - **Ferramenta mínima em sites remotos de energia.** O modelo pode consultar o vídeo gravado dos últimos minutos e abrir um chamado vinculado ao alerta. Não pode liberar a chave digital do gabinete.
 - **Ferramenta mínima em condomínio.** O modelo pode subir a câmera no mosaico e sugerir o texto da comunicação com a portaria. Quem fala com a portaria é o operador.
 - **Contexto de turno.** Informar ao modelo quantos alertas o operador recebeu na última hora muda a resposta: com 38 alertas na fila, a recomendação precisa ser mais curta e mais seletiva.

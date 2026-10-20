@@ -2,6 +2,18 @@
 
 As versões seguem o formato `vX.Y`. Cada versão diz o que entrou, o que mudou e de onde veio a mudança.
 
+## v0.2.3 · outubro de 2026 · Prompt com harness: o essencial primeiro
+
+Teco Sodré ajustou o prompt B na oficina ao vivo, e o repositório passa a usar a mesma versão.
+
+Mudou:
+
+- **Regra 4 do prompt B:** "O operador está cansado e sozinho: o essencial vem primeiro, em linguagem simples." As regras 1 a 3 não mudam.
+- **Formato da resposta:** de cinco partes em até 120 palavras para seis partes em até 240 palavras. A parte 1 vem PRIMEIRO: um quadro visual com os 3 passos do que o operador faz agora, numerados, uma linha curta cada, com emoji e seta entre eles. Depois: hipóteses com falso positivo, o que verificar em 60 segundos, quem decide e quando escalar, o que registrar e o que não sabe.
+- **Por quê:** o operador cansado lê os 3 passos antes de qualquer outra coisa. O quadro é texto (emoji e setas), então funciona igual em qualquer assistente e não depende de gerar imagem, que deixaria a resposta mais lenta.
+- Atualizados, em português, inglês e espanhol: `modelos/prompt-com-harness.md`, `medir/equipar.md`, as páginas de modelos, de skills e do passo Equipar do site, a skill `triagem-de-alerta` (descrição, resumo em inglês, instruções, formato de saída e exemplo) e os catálogos de skills nos README.
+- O teste continua o mesmo: comparar com a pergunta só "o que eu faço?" (prompt A).
+
 ## v0.2.2 · outubro de 2026 · Tema claro por padrão e botão sol/lua
 
 Pedido de Teco Sodré para o site.

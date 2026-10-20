@@ -1,6 +1,6 @@
 # Prompt com harness
 
-O mesmo alerta em dois prompts: **A**, o modelo puro, e **B**, o modelo com harness. É o exercício do passo [Equipar](../medir/equipar.md) e a forma mais rápida de ver, em cinco minutos, o que o harness muda.
+O mesmo alerta em dois prompts: **A**, o modelo puro (só "o que eu faço?"), e **B**, o modelo com harness. É o exercício do passo [Equipar](../medir/equipar.md) e a forma mais rápida de ver, em cinco minutos, o que o harness muda.
 
 > **Use só alertas fictícios.** Não cole rosto, placa, nome ou imagem de pessoa real em assistente de uso geral. Tratamento de dado pessoal segue a LGPD e a política da sua empresa.
 
@@ -45,15 +45,18 @@ Regras desta operação (harness):
 2. Nível de controle deste caso: <N1, N2 ou N3> (<quem decide>).
 3. Nunca recomende ação difícil de desfazer (abordar pessoa, acionar a polícia,
    bloquear acesso, parar a operação) sem confirmação humana no vídeo.
-4. O operador está cansado e sozinho: seja curto e concreto.
+4. O operador está cansado e sozinho: o essencial vem primeiro, em linguagem simples.
 
-Responda em até 120 palavras, neste formato:
-A) Hipótese mais provável e duas alternativas, incluindo falso positivo.
-B) O que verificar nos próximos 60 segundos, em ordem.
-C) Quem decide e quando escalar.
-D) O que registrar no relatório do turno.
-E) O que você não sabe e precisaria saber.
+Responda em até 240 palavras, neste formato:
+1) PRIMEIRO, um quadro visual com os 3 passos do que o operador faz agora, numerados 1, 2 e 3, uma linha curta cada, com um emoji e uma seta entre eles (exemplo: 1️⃣ 👀 Conferir o vídeo → 2️⃣ ... → 3️⃣ ...). Se a sua ferramenta desenhar diagramas ou imagens, pode mostrar esse mesmo fluxo como figura.
+2) Hipótese mais provável e duas alternativas, incluindo falso positivo.
+3) O que verificar nos próximos 60 segundos, em ordem.
+4) Quem decide e quando escalar.
+5) O que registrar no relatório do turno.
+6) O que você não sabe e precisaria saber.
 ```
+
+**Por que o quadro vem primeiro.** O operador cansado lê os 3 passos antes de qualquer outra coisa e já sabe o que fazer agora; o resto da resposta explica e registra. O quadro é texto (emoji e setas), então funciona igual em qualquer assistente e não depende de gerar imagem, que deixa a resposta mais lenta. O limite é de 240 palavras porque o quadro ocupa espaço, mas o essencial continua nas primeiras linhas.
 
 Para preencher a regra 2, use o texto de "Quem decide" da [tabela de nível de controle](nivel-de-controle.md). Exemplo para N2: "A IA aponta e recomenda; o operador confirma antes de agir. Cada aceite ou recusa fica registrado."
 
@@ -71,7 +74,8 @@ Se o caso estiver em **Trava**, não rode o prompt B como se fosse operação: o
 
 O que observar:
 
-- [ ] Ficou mais curta e direta?
+- [ ] Começou pelo quadro de 3 passos, legível em poucos segundos?
+- [ ] O essencial veio primeiro, em linguagem simples?
 - [ ] Pediu para verificar antes de agir?
 - [ ] Disse quem decide?
 - [ ] Admitiu o que não sabe?
@@ -89,4 +93,4 @@ Para um grupo, cada pessoa roda os dois prompts e vota em A, B ou nenhuma das du
 - **Uma regra por erro.** Quando a resposta errar de um jeito novo, acrescente a regra que teria evitado o erro e registre a mudança (veja [Reforçar](../medir/reforcar.md)).
 - **Versione.** Dê número de versão ao prompt e registre qual versão estava em uso em cada alerta. Sem isso, uma mudança de comportamento não tem explicação.
 - **Teste de novo depois de trocar de modelo.** O mesmo prompt pode render diferente em outro modelo ou em outra versão do mesmo modelo. Rode o lado a lado outra vez.
-- **Mantenha o limite de tamanho.** Resposta longa não é lida às 3 da manhã.
+- **Mantenha o quadro primeiro e o limite de 240 palavras.** Resposta longa não é lida às 3 da manhã, e o operador precisa ver os 3 passos antes de rolar a tela.

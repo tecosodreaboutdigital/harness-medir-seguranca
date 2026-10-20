@@ -177,7 +177,7 @@ Revisión: 30 días después de encender, con coordinador, operador y supervisor
 <p>Agregue las filas de su caso, pero no quite la última. Errores comunes: declarar el nivel del sistema y no del caso; leer N3 como "IA más autónoma"; olvidar el Bloqueo porque la tabla dio N1; no registrar la fila; nunca revisar.</p>
 
 <h2 id="prompt">3. Prompt con harness</h2>
-<p>La misma alerta en dos prompts: <strong>A</strong>, el modelo solo, y <strong>B</strong>, el modelo con harness. En cinco minutos se ve lo que cambia el harness.</p>
+<p>La misma alerta en dos prompts: <strong>A</strong>, el modelo solo (solo "¿qué hago?"), y <strong>B</strong>, el modelo con harness. En cinco minutos se ve lo que cambia el harness.</p>
 <div class="callout"><span class="lbl">Solo alertas ficticias</span><p>No pegue rostros, placas, nombres ni imágenes de personas reales en un asistente de uso general. El tratamiento de datos personales sigue la ley de protección de datos aplicable y la política de su empresa.</p></div>
 <pre><code>ALERTA 02:47 · cámara 14 · industria
 Evento: intrusión perimetral
@@ -202,19 +202,21 @@ Reglas de esta operación (harness):
 3. Nunca recomiende una acción difícil de deshacer (abordar a una persona,
    llamar a la policía, bloquear un acceso, detener la operación) sin
    confirmación humana en el video.
-4. El operador está cansado y solo: sea breve y concreto.
+4. El operador está cansado y solo: lo esencial va primero, en lenguaje simple.
 
-Responda en hasta 120 palabras, con este formato:
-A) Hipótesis más probable y dos alternativas, incluido un falso positivo.
-B) Qué verificar en los próximos 60 segundos, en orden.
-C) Quién decide y cuándo escalar.
-D) Qué registrar en el informe del turno.
-E) Qué no sabe y necesitaría saber.</code></pre>
+Responda en hasta 240 palabras, con este formato:
+1) PRIMERO, un cuadro visual con los 3 pasos de lo que el operador hace ahora, numerados 1, 2 y 3, una línea corta cada uno, con un emoji y una flecha entre ellos (ejemplo: 1️⃣ 👀 Revisar el video → 2️⃣ ... → 3️⃣ ...). Si su herramienta dibuja diagramas o imágenes, puede mostrar ese mismo flujo como figura.
+2) Hipótesis más probable y dos alternativas, incluido un falso positivo.
+3) Qué verificar en los próximos 60 segundos, en orden.
+4) Quién decide y cuándo escalar.
+5) Qué registrar en el informe del turno.
+6) Qué no sabe y necesitaría saber.</code></pre>
+<div class="callout"><span class="lbl">Por qué el cuadro va primero</span><p>El operador cansado lee los 3 pasos antes que cualquier otra cosa y ya sabe qué hacer ahora; el resto de la respuesta explica y registra. El cuadro es texto (emoji y flechas), así que funciona igual en cualquier asistente y no depende de generar imágenes, que harían más lenta la respuesta. El límite es de 240 palabras porque el cuadro ocupa espacio, pero lo esencial sigue en las primeras líneas.</p></div>
 <h3>Cómo probarlos lado a lado</h3>
 <ol>
 <li>Abra una conversación nueva en un asistente que ya use y pegue el prompt A.</li>
 <li>Abra otra conversación nueva, en el mismo asistente, y pegue el prompt B. Una conversación nueva evita que B herede el contexto de A.</li>
-<li>Compare: ¿quedó más corta? ¿Pidió verificar antes de actuar? ¿Dijo quién decide? ¿Admitió lo que no sabe? ¿Recordó registrar? ¿Puso un falso positivo entre las alternativas?</li>
+<li>Compare: ¿empezó con el cuadro de 3 pasos? ¿Lo esencial vino primero, en lenguaje simple? ¿Pidió verificar antes de actuar? ¿Dijo quién decide? ¿Admitió lo que no sabe? ¿Recordó registrar? ¿Puso un falso positivo entre las alternativas?</li>
 <li>Si B recomendó una acción difícil de deshacer sin confirmación en el video, el harness falló y necesita refuerzo.</li>
 <li>Decida: <strong>¿qué respuesta le entregaría a su operador a las 3 de la mañana?</strong></li>
 </ol>

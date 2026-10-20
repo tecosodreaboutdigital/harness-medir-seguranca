@@ -175,7 +175,7 @@ Review: 30 days after go-live, with coordinator, operator and supervisor.</code>
 <p>Add the rows for your case, but never remove the last one. Common mistakes: declaring the level of a system instead of a case; reading N3 as "more autonomous AI"; forgetting the Lock because the table said N1; not recording the row; never reviewing.</p>
 
 <h2 id="prompt">3. Prompt with harness</h2>
-<p>The same alert in two prompts: <strong>A</strong>, the bare model, and <strong>B</strong>, the model with a harness. Five minutes is enough to see what the harness changes.</p>
+<p>The same alert in two prompts: <strong>A</strong>, the bare model (just "what should I do?"), and <strong>B</strong>, the model with a harness. Five minutes is enough to see what the harness changes.</p>
 <div class="callout"><span class="lbl">Fictitious alerts only</span><p>Do not paste real faces, plates, names or images of people into a general-purpose assistant. Personal data handling follows the applicable privacy law and your company's policy.</p></div>
 <pre><code>ALERT 02:47 · camera 14 · industrial site
 Event: perimeter intrusion
@@ -200,19 +200,21 @@ Rules of this operation (harness):
 3. Never recommend an action that is hard to undo (approaching a person,
    calling the police, blocking access, stopping operations) without human
    confirmation on video.
-4. The operator is tired and alone: be short and concrete.
+4. The operator is tired and alone: put the essentials first, in plain language.
 
-Answer in 120 words or fewer, in this format:
-A) Most likely hypothesis and two alternatives, including a false positive.
-B) What to check in the next 60 seconds, in order.
-C) Who decides and when to escalate.
-D) What to record in the shift report.
-E) What you do not know and would need to know.</code></pre>
+Answer in 240 words or fewer, in this format:
+1) FIRST, a visual board with the 3 steps the operator takes now, numbered 1, 2 and 3, one short line each, with an emoji and an arrow between them (example: 1️⃣ 👀 Check the video → 2️⃣ ... → 3️⃣ ...). If your tool can draw diagrams or images, it may show the same flow as a picture.
+2) Most likely hypothesis and two alternatives, including a false positive.
+3) What to check in the next 60 seconds, in order.
+4) Who decides and when to escalate.
+5) What to record in the shift report.
+6) What you do not know and would need to know.</code></pre>
+<div class="callout"><span class="lbl">Why the board comes first</span><p>A tired operator reads the 3 steps before anything else and already knows what to do now; the rest of the answer explains and records. The board is text (emoji and arrows), so it works the same in any assistant and does not depend on image generation, which would slow the answer down. The limit is 240 words because the board takes space, but the essentials stay in the first lines.</p></div>
 <h3>Running them side by side</h3>
 <ol>
 <li>Open a new conversation in an assistant you already use and paste prompt A.</li>
 <li>Open another new conversation, in the same assistant, and paste prompt B. A fresh conversation keeps B from inheriting A's context.</li>
-<li>Compare: is it shorter? Did it ask to verify before acting? Did it say who decides? Did it admit what it does not know? Did it remember to log? Did it list a false positive among the alternatives?</li>
+<li>Compare: did it open with the 3-step board? Did the essentials come first, in plain language? Did it ask to verify before acting? Did it say who decides? Did it admit what it does not know? Did it remember to log? Did it list a false positive among the alternatives?</li>
 <li>If B recommended an action that is hard to undo without confirmation on video, the harness failed and needs reinforcement.</li>
 <li>Decide: <strong>which answer would you hand your operator at 3 a.m.?</strong></li>
 </ol>

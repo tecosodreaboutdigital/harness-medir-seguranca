@@ -11,7 +11,7 @@ Uma skill não é um atalho para dar mais poder ao agente. É o harness escrito 
 | Skill | Passo MEDIR | O que entrega |
 |---|---|---|
 | [mapear-camera](mapear-camera/SKILL.md) | Mapear | Entrevista sobre uma câmera, um evento e uma decisão; devolve o contrato de tarefa preenchido e o nível de controle com a linha da tabela que o definiu |
-| [triagem-de-alerta](triagem-de-alerta/SKILL.md) | Equipar | Aplica o prompt com harness a um alerta e responde no formato A a E, sem nunca recomendar ação difícil de desfazer sem confirmação humana |
+| [triagem-de-alerta](triagem-de-alerta/SKILL.md) | Equipar | Aplica o prompt com harness a um alerta e responde no formato de 1 a 6, começando pelo quadro visual de 3 passos, sem nunca recomendar ação difícil de desfazer sem confirmação humana |
 | [revisar-nivel-de-controle](revisar-nivel-de-controle/SKILL.md) | Delegar | Audita uma operação com analíticos já ligados contra a tabela e o checklist, e lista as lacunas |
 | [integracao-vms](integracao-vms/SKILL.md) | Equipar | Guia para receber alertas de um sistema de gravação por eventos ONVIF, REST ou webhook, em somente leitura, com payload e servidor mock |
 | [integracao-controle-de-acesso](integracao-controle-de-acesso/SKILL.md) | Equipar | Webhook somente leitura para eventos de controle de acesso e RH (credencial revogada, desligamento), com notas de LGPD para biometria |
