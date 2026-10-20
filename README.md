@@ -1,10 +1,12 @@
 # Harness MEDIR para segurança eletrônica
 
+**Derivado do harness MEDIR, de Teco Sodré: [github.com/tecosodreaboutdigital/harness-medir](https://github.com/tecosodreaboutdigital/harness-medir)** (série completa em [tecosodreaboutdigital.github.io/harness-medir](https://tecosodreaboutdigital.github.io/harness-medir/)).
+
 *Leia em [English](README.en.md) · [Español](README.es.md). Site: [tecosodreaboutdigital.github.io/harness-medir-seguranca](https://tecosodreaboutdigital.github.io/harness-medir-seguranca/), em português, inglês e espanhol.*
 
 O ciclo MEDIR aplicado ao CFTV e ao monitoramento: modelos de uma página, regras de nível de controle e casos anonimizados para quem vai colocar IA dentro de uma central de segurança sem entregar a decisão à máquina.
 
-Este repositório nasceu na Oficina Prática de IA na Segurança, apresentada por Teco Sodré na SegSummit em 21 de outubro de 2026, e é construído em conjunto pela comunidade de participantes da oficina.
+Este repositório nasceu na Oficina Prática de IA na Segurança, apresentada por Teco Sodré na SegSummit em 21 de outubro de 2026, e é construído em conjunto com a [comunidade A.I.S.](#comunidade-ais).
 
 Estado: v0.2, primeira expansão: site em três idiomas e sete skills para agentes. Veja o [CHANGELOG](CHANGELOG.md).
 
@@ -132,6 +134,20 @@ Escolha uma câmera real da sua operação e siga os passos. Não precisa instal
 - [CONTRIBUTING.md](CONTRIBUTING.md): como contribuir e regras de anonimização
 - [CHANGELOG.md](CHANGELOG.md): histórico de versões
 - [LICENSE](LICENSE): texto legal da CC BY 4.0
+
+---
+
+## Comunidade A.I.S.
+
+<img src="docs/assets/ais.png" width="128" height="128" align="right" alt="Símbolo da comunidade A.I.S., Agentes Inteligentes de Segurança">
+
+**A.I.S. 🚀 Agentes de IA = Modelo + Harness para Segurança Eletrônica, Monitoramento e Produtividade**
+
+Uma comunidade no WhatsApp sobre este tema, para quem opera, regula, audita ou constrói soluções digitais inteligentes. É lá que aparecem os casos, as dúvidas e os erros que depois viram regra neste repositório. No grupo vale a mesma regra de anonimização do repositório.
+
+**[Entrar na comunidade A.I.S. no WhatsApp](https://chat.whatsapp.com/FlXr6KUllRpCkjJz16uZYY)**
+
+<br clear="right">
 
 ---
 

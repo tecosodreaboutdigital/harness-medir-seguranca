@@ -1,6 +1,6 @@
 # Como contribuir
 
-Este repositório é construído pela comunidade que participou da Oficina Prática de IA na Segurança e por quem mais operar CFTV e monitoramento. As próximas versões saem do que acontece nas operações de vocês.
+Este repositório é construído com a comunidade A.I.S. (Agentes de IA = Modelo + Harness para Segurança Eletrônica, Monitoramento e Produtividade) e por quem mais operar CFTV e monitoramento. As próximas versões saem do que acontece nas operações de vocês.
 
 ## O que você pode trazer
 
@@ -25,7 +25,7 @@ Este repositório é construído pela comunidade que participou da Oficina Prát
 4. Um mantenedor revisa anonimização, clareza e coerência com a terminologia do repositório. Pode pedir ajustes.
 5. Depois de aprovada, a mudança entra no [CHANGELOG](CHANGELOG.md) na próxima versão.
 
-Quem não usa GitHub pode trazer a contribuição para o grupo da comunidade; um mantenedor transcreve, já anonimizada, e abre a issue.
+Quem não usa GitHub pode trazer a contribuição para a [comunidade A.I.S. no WhatsApp](https://chat.whatsapp.com/FlXr6KUllRpCkjJz16uZYY); um mantenedor transcreve, já anonimizada, e abre a issue.
 
 ## Regras de anonimização
 

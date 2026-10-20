@@ -1,10 +1,12 @@
 # Harness MEDIR para seguridad electrónica
 
+**Derivado del harness MEDIR, de Teco Sodré: [github.com/tecosodreaboutdigital/harness-medir](https://github.com/tecosodreaboutdigital/harness-medir)** (serie completa en [tecosodreaboutdigital.github.io/harness-medir](https://tecosodreaboutdigital.github.io/harness-medir/)).
+
 *Leer en [Português](README.md) · [English](README.en.md). Sitio: [tecosodreaboutdigital.github.io/harness-medir-seguranca](https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/), en español, portugués e inglés.*
 
 El ciclo MEDIR aplicado al CCTV y al monitoreo: plantillas de una página, reglas de nivel de control, casos anonimizados y skills para agentes, para quien va a poner IA dentro de una central de seguridad sin entregarle la decisión a la máquina.
 
-Este repositorio nació en el Taller Práctico de IA en Seguridad, presentado por Teco Sodré en SegSummit en octubre de 2026, y se construye junto con la comunidad del taller.
+Este repositorio nació en el Taller Práctico de IA en Seguridad, presentado por Teco Sodré en SegSummit en octubre de 2026, y se construye junto con la [comunidad A.I.S.](#comunidad-ais).
 
 Estado: v0.2, primera expansión: un sitio en tres idiomas y siete skills para agentes. Vea el [CHANGELOG](CHANGELOG.md) (en portugués).
 
@@ -46,6 +48,18 @@ Aplíquelo en orden; la primera fila verdadera define el nivel. **Un N más alto
 - [Sitio](https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/) (fuente en [docs/es/](docs/es/index.html)): los cinco pasos, las [plantillas](docs/es/modelos.html) y las [skills](docs/es/skills.html) en español. HTML y CSS estáticos, sin JavaScript; solo las fuentes IBM Plex vienen de Google Fonts, con una fuente del sistema como respaldo.
 - [skills/](skills/README.md): siete skills en el formato abierto Agent Skills, cada una con una sección de harness (qué puede hacer, qué nunca hace, quién confirma). Instrucciones en portugués, con un resumen en inglés al inicio de cada archivo.
 - [medir/](medir/mapear.md), [modelos/](modelos/contrato-de-tarefa.md) y [casos/](casos/README.md): los pasos, las plantillas y los casos en Markdown, en portugués.
+
+## Comunidad A.I.S.
+
+<img src="docs/assets/ais.png" width="128" height="128" align="right" alt="Símbolo de la comunidad A.I.S., Agentes Inteligentes de Seguridad">
+
+**A.I.S. 🚀 Agentes de IA = Modelo + Harness para Seguridad Electrónica, Monitoreo y Productividad**
+
+Una comunidad en WhatsApp sobre este tema, para quienes operan, regulan, auditan o construyen soluciones digitales inteligentes. Ahí aparecen los casos, las dudas y los errores que después se vuelven reglas en este repositorio. Las conversaciones son mayormente en portugués, y allí también valen las reglas de anonimización del repositorio.
+
+**[Unirse a la comunidad A.I.S. en WhatsApp](https://chat.whatsapp.com/FlXr6KUllRpCkjJz16uZYY)**
+
+<br clear="right">
 
 ## Cómo contribuir
 

@@ -1,10 +1,12 @@
 # The MEDIR harness for security operations
 
+**Derived from the MEDIR harness by Teco Sodré: [github.com/tecosodreaboutdigital/harness-medir](https://github.com/tecosodreaboutdigital/harness-medir)** (full series at [tecosodreaboutdigital.github.io/harness-medir](https://tecosodreaboutdigital.github.io/harness-medir/)).
+
 *Read in [Português](README.md) · [Español](README.es.md). Website: [tecosodreaboutdigital.github.io/harness-medir-seguranca](https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/), in English, Portuguese and Spanish.*
 
 The MEDIR cycle applied to CCTV and monitoring: one-page templates, control level rules, anonymized cases and agent skills for anyone putting AI inside a security control room without handing the decision to the machine.
 
-This repository started at the Practical AI in Security workshop, presented by Teco Sodré at SegSummit in October 2026, and is built together with the workshop community.
+This repository started at the Practical AI in Security workshop, presented by Teco Sodré at SegSummit in October 2026, and is built together with the [A.I.S. community](#the-ais-community).
 
 Status: v0.2, first expansion: a website in three languages and seven agent skills. See the [CHANGELOG](CHANGELOG.md) (in Portuguese).
 
@@ -48,6 +50,18 @@ Apply in order; the first true row sets the level. **A higher N means more human
 - [Website](https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/) (source in [docs/en/](docs/en/index.html)): the five steps, the [templates](docs/en/modelos.html) and the [skills](docs/en/skills.html) in English. Static HTML and CSS, no JavaScript; only the IBM Plex fonts come from Google Fonts, with a system font fallback.
 - [skills/](skills/README.md): seven skills in the open Agent Skills format, each with a harness section (what it may do, what it must never do, who confirms). Instructions in Portuguese, with an English summary at the top of each file.
 - [medir/](medir/mapear.md), [modelos/](modelos/contrato-de-tarefa.md) and [casos/](casos/README.md): the steps, templates and cases in Portuguese Markdown.
+
+## The A.I.S. community
+
+<img src="docs/assets/ais.png" width="128" height="128" align="right" alt="Symbol of the A.I.S. community, Intelligent Security Agents">
+
+**A.I.S. 🚀 AI Agents = Model + Harness for Electronic Security, Monitoring and Productivity**
+
+A WhatsApp community on this topic, for people who operate, regulate, audit or build intelligent digital solutions. It is where the cases, questions and mistakes that later become rules in this repository first show up. Conversations are mostly in Portuguese, and the repository's anonymization rules apply there too.
+
+**[Join the A.I.S. community on WhatsApp](https://chat.whatsapp.com/FlXr6KUllRpCkjJz16uZYY)**
+
+<br clear="right">
 
 ## Contributing
 

@@ -2,6 +2,26 @@
 
 As versões seguem o formato `vX.Y`. Cada versão diz o que entrou, o que mudou e de onde veio a mudança.
 
+## v0.2.1 · outubro de 2026 · Comunidade A.I.S., origem explícita e prévias de compartilhamento
+
+Ajustes decididos por Teco Sodré antes da publicação da v0.2.
+
+Entrou:
+
+- **Comunidade A.I.S.** A comunidade do projeto passa a ter nome: "A.I.S. 🚀 Agentes de IA = Modelo + Harness para Segurança Eletrônica, Monitoramento e Produtividade", no WhatsApp, para quem opera, regula, audita ou constrói soluções digitais inteligentes. Seção própria, com o símbolo e o link de convite, nos três README e na página inicial do site em cada idioma; menções antigas à "comunidade da oficina" substituídas.
+- **Origem explícita.** "Derivado do harness MEDIR, de Teco Sodré", com link para o repositório e para o site de origem, no topo dos três README, no início da página inicial e no rodapé de todas as páginas do site.
+- **Prévia de compartilhamento.** Nova imagem Open Graph `docs/assets/og.jpg` (1200x630, JPEG progressivo, cerca de 85 KB), gerada a partir de `docs/assets/og-fonte.html`, com o símbolo da comunidade. Todas as páginas declaram `og:image` com URL absoluta, tipo, tamanho, texto alternativo e `og:locale` por idioma (pt_BR, en_US, es_ES), e `twitter:card` grande.
+- **Ícones.** `favicon.ico` (16, 32 e 48 px) e `apple-touch-icon.png` (180 px), além do `favicon.svg`, declarados em todas as páginas.
+- `docs/assets/ais.png`: símbolo da comunidade, otimizado (256 px).
+
+Saiu:
+
+- `docs/assets/og.png`, substituída por `og.jpg`.
+
+Mudou:
+
+- `CONTRIBUTING.md`: a comunidade A.I.S. aparece pelo nome, e quem não usa GitHub tem o link do grupo.
+
 ## v0.2 · outubro de 2026 · Primeira expansão da comunidade
 
 Primeira expansão depois do lançamento: o conteúdo ganha um site em três idiomas e passa a poder ser carregado por agentes de IA, sempre com o harness escrito junto. Por Teco Sodré, WeSAFER e AVANTIA.
