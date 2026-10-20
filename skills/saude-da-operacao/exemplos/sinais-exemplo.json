@@ -1,0 +1,11 @@
+{
+  "agora": "2026-10-21T05:50:00Z",
+  "limites": {"atraso_max_s": 120, "deriva_relogio_max_s": 5},
+  "cameras": [
+    {"camera_id": "cam12", "area": "perimetro-leste", "ping_ok": true,  "gravando": true,  "ultimo_quadro_em": "2026-10-21T05:49:58Z", "deriva_relogio_s": 0, "fonte": "medido",   "eventos_na_janela": 0},
+    {"camera_id": "cam13", "area": "perimetro-leste", "ping_ok": true,  "gravando": true,  "ultimo_quadro_em": "2026-10-21T05:49:59Z", "deriva_relogio_s": 1, "fonte": "medido",   "eventos_na_janela": 1},
+    {"camera_id": "cam14", "area": "perimetro-leste", "ping_ok": true,  "gravando": true,  "ultimo_quadro_em": "2026-10-21T05:46:10Z", "deriva_relogio_s": 0, "fonte": "medido",   "eventos_na_janela": 0},
+    {"camera_id": "cam21", "area": "doca",            "ping_ok": false, "gravando": false, "ultimo_quadro_em": "2026-10-21T03:12:00Z", "deriva_relogio_s": 0, "fonte": "medido",   "eventos_na_janela": 0},
+    {"camera_id": "cam31", "area": "acesso-norte",    "ping_ok": true,  "gravando": true,  "ultimo_quadro_em": "2026-10-21T05:49:57Z", "deriva_relogio_s": 0, "fonte": "estimado", "eventos_na_janela": 4}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "evento_id": "EVT-substituido-no-envio",
+  "origem": "acesso.exemplo.local",
+  "tipo": "credencial_revogada",
+  "ocorrido_em": "substituido-no-envio",
+  "id_pessoa_pseudonimo": "p-7f3a9c",
+  "credencial_status": "revogada",
+  "motivo": "desligamento",
+  "nome": "campo proibido: o adaptador descarta e o log registra só o nome do campo"
+}

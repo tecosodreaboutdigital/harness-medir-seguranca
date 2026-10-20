@@ -1,0 +1,11 @@
+{
+  "evento_id": "EVT-substituido-no-envio",
+  "origem": "gravacao.exemplo.local",
+  "tipo": "invasao_de_perimetro",
+  "ocorrido_em": "substituido-no-envio",
+  "camera_id": "cam14",
+  "regra": "perimetro-leste",
+  "confianca": 0.71,
+  "referencia_video": "ref-video-0001",
+  "observacao_livre": "campo fora da lista fechada: o adaptador descarta"
+}

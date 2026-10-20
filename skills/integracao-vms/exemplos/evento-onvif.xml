@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exemplo fictício de resposta PullMessages do serviço de eventos ONVIF.
+     Mostra o formato que o adaptador lê e converte para alerta-webhook.json.
+     Tokens, regra e horários são inventados. -->
+<tev:PullMessagesResponse
+    xmlns:tev="http://www.onvif.org/ver10/events/wsdl"
+    xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2"
+    xmlns:tt="http://www.onvif.org/ver10/schema"
+    xmlns:tns1="http://www.onvif.org/ver10/topics">
+  <tev:CurrentTime>2026-10-21T05:47:12Z</tev:CurrentTime>
+  <tev:TerminationTime>2026-10-21T05:57:12Z</tev:TerminationTime>
+  <wsnt:NotificationMessage>
+    <wsnt:Topic Dialect="http://www.onvif.org/ver10/tev/topicExpression/ConcreteSet">tns1:RuleEngine/FieldDetector/ObjectsInside</wsnt:Topic>
+    <wsnt:Message>
+      <tt:Message UtcTime="2026-10-21T05:47:11Z" PropertyOperation="Changed">
+        <tt:Source>
+          <tt:SimpleItem Name="VideoSourceConfigurationToken" Value="cam14"/>
+          <tt:SimpleItem Name="VideoAnalyticsConfigurationToken" Value="analitico-1"/>
+          <tt:SimpleItem Name="Rule" Value="perimetro-leste"/>
+        </tt:Source>
+        <tt:Data>
+          <tt:SimpleItem Name="IsInside" Value="true"/>
+        </tt:Data>
+      </tt:Message>
+    </wsnt:Message>
+  </wsnt:NotificationMessage>
+</tev:PullMessagesResponse>

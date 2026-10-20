@@ -1,0 +1,12 @@
+{
+  "evento_id": "EVT-substituido-no-envio",
+  "origem": "acesso.exemplo.local",
+  "tipo": "tentativa_com_credencial_revogada",
+  "ocorrido_em": "substituido-no-envio",
+  "leitor_id": "leitor-03",
+  "area": "portaria-pedestres",
+  "camera_id": "cam02",
+  "id_pessoa_pseudonimo": "p-7f3a9c",
+  "credencial_status": "revogada",
+  "referencia_video": "ref-video-0002"
+}

@@ -1,0 +1,8 @@
+{
+  "evento_id": "EVT-substituido-no-envio",
+  "origem": "rh.exemplo.local",
+  "tipo": "desligamento",
+  "ocorrido_em": "substituido-no-envio",
+  "id_pessoa_pseudonimo": "p-7f3a9c",
+  "motivo": "fim_de_vinculo"
+}
