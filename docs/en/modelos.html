@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Templates · The MEDIR harness for security operations</title>
+<meta name="description" content="Five one-page templates to copy: task contract, control level with the Lock, prompt with harness, pre-launch checklist, and sensors with the minimum record for every alert.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/modelos.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/modelos.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/modelos.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/modelos.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/modelos.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="Templates · The MEDIR harness for security operations">
+<meta property="og:description" content="Five one-page templates to copy: task contract, control level with the Lock, prompt with harness, pre-launch checklist, and sensors with the minimum record for every alert.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/modelos.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Templates · The MEDIR harness for security operations">
+<meta name="twitter:description" content="Five one-page templates to copy: task contract, control level with the Lock, prompt with harness, pre-launch checklist, and sensors with the minimum record for every alert.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../modelos.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="modelos.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/modelos.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html" aria-current="page">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<main id="conteudo" class="page">
+<p class="eyebrow">Templates to copy</p>
+<h1>Five pages that fit in a night shift</h1>
+<p class="deck">Copy them, fill them in with one real camera and bring them to your next meeting with the control room lead. Each template fits on one page and answers one step of the cycle.</p>
+<nav class="toc" aria-label="On this page"><p>On this page</p><ol>
+<li><a href="#contrato">Task contract</a></li>
+<li><a href="#nivel">Control level</a>, with the <a href="#perguntas">four questions</a> and the <a href="#matriz">action matrix</a></li>
+<li><a href="#prompt">Prompt with harness</a></li>
+<li><a href="#checklist">Pre-launch checklist</a></li>
+<li><a href="#sensores">Sensors</a> and the <a href="#registro">minimum record</a></li>
+</ol></nav>
+<p>The Portuguese originals, in Markdown, live in the repository's <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/modelos">modelos/</a> folder.</p>
+
+<h2 id="contrato">1. Task contract</h2>
+<p>One page for <strong>one camera, one event and one decision.</strong> It is the output of <a href="mapear.html">Map</a> and the basis for everything after it. Leave no field blank: write "not applicable" or "open, owner: &lt;name&gt;".</p>
+<pre><code># Task contract: &lt;short name of the case&gt;
+Version: &lt;v1&gt;   Date: &lt;yyyy-mm-dd&gt;   Owner: &lt;one person, not a department&gt;
+
+## Use case in one sentence
+Camera: &lt;which camera or scene&gt;
+Event: &lt;what the AI should detect&gt;
+Decision: &lt;which decision the alert feeds, and who makes it&gt;
+
+## Delivers
+&lt;What a correct alert gives the operator, concrete enough that two
+people would recognize the same output as right.&gt;
+
+## Never does
+&lt;E.g.: never calls the police, never blocks access, never identifies a
+person by name, never writes to the client's system.&gt;
+
+## Control level
+Level: &lt;N1, N2, N3 or Lock&gt;
+Table row that set it: &lt;copy the condition&gt;
+Who confirms on video: &lt;role&gt;   Deadline: &lt;minutes&gt;
+Who authorizes the action: &lt;role, if N3&gt;   Deadline: &lt;minutes&gt;
+If nobody responds in time: &lt;never "the AI acts alone"&gt;
+
+## Verification
+&lt;Second sensor, recorded video, check on site.
+If none exists, the level is Lock.&gt;
+
+## Tools
+&lt;Closed list of what the model may query or trigger, and how each fails.&gt;
+
+## Knowledge needed
+&lt;Relevant protocol, shift roster, cleared areas.
+And what it does NOT need to carry.&gt;
+
+## Done when
+&lt;E.g.: alert with a logged decision (accepted or rejected, with a reason)
+within &lt;N&gt; minutes.&gt;
+
+## Targets and sensors
+False positives accepted per thousand alerts: &lt;number&gt;
+Time to triage (median / worst case): &lt;min / min&gt;
+Alerts per operator per hour (limit): &lt;number&gt;
+
+## Review
+Next harness review: &lt;date&gt;   Participants: &lt;roles&gt;</code></pre>
+<details><summary>Filled-in example (fictitious): smoke outside the fence at a remote site</summary>
+<pre><code># Task contract: smoke outside the fence, remote site
+Version: v1   Owner: control room coordinator
+
+Camera: thermal camera on the north perimeter of the remote energy site
+Event: smoke or a heat spot outside the fence
+Decision: dispatch a field team or not; the operator decides
+
+Delivers: alert with thermal image and video clip, most likely hypothesis
+and alternatives (crop burning, dust, reflection), and what to check in 60 s.
+
+Never does: never dispatches a team on its own, never releases the
+cabinet's digital key, never calls an outside agency.
+
+Level: N3
+Row: someone acts in the real world in a way that is hard to undo
+Who confirms on video: control room operator   Deadline: 5 min
+Who authorizes: shift supervisor   Deadline: 10 min
+If nobody responds: escalate to the coordinator; the AI does not act
+
+Verification: neighboring camera and, when available, the team on site.
+Tools: last 10 minutes of video from both perimeter cameras; open a
+ticket linked to the alert. A failed query shows as a failure.
+Done when: every critical alert has a logged decision within 5 min.
+Review: 30 days after go-live, with coordinator, operator and supervisor.</code></pre>
+</details>
+
+<h2 id="nivel">2. Control level</h2>
+<p>How much the AI may do alone in a use case, set by the cost of being wrong. <strong>A higher N means more human control.</strong> Read top to bottom: the first true row sets the level.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">If...</th><th scope="col">Level</th><th scope="col">Who decides</th></tr></thead>
+<tbody>
+<tr><td>when the alert fires, someone acts in the real world in a way that is hard to undo (approach a person, call the police, block access, stop operations)</td><td><span class="lvl n3">N3</span></td><td>The AI flags. The operator confirms on video and another person authorizes. Everything logged, with who decided and why.</td></tr>
+<tr><td>the system reads from or writes to another company's or the client's system, or the event happens more than 100 times a month, or the action has effects outside the control room</td><td><span class="lvl n2">N2</span></td><td>The AI flags and recommends. The operator confirms before acting. Every acceptance or rejection is logged.</td></tr>
+<tr><td>the action is internal, easy to undo and involves no third-party integration</td><td><span class="lvl">N1</span></td><td>The AI may act alone (tag footage, open a ticket, bring the camera up on the wall), always logged.</td></tr>
+</tbody></table></div>
+<div class="lockbox"><span class="lbl">Lock, above everything</span><p>If there is no way to check whether the alert was right, the case is under <strong>Lock</strong>, whatever row applies above. Do not delegate anything yet. Build the verification first (second sensor, recorded video, check on site); once it exists, the case sits at the level the table set.</p></div>
+
+<h3 id="perguntas">The four questions</h3>
+<ol>
+<li>When the alert fires, does someone act in the real world in a way that is hard to undo?</li>
+<li>Does the system need to read from or write to another company's or the client's system? (access control, HR, ERP, watch list)</li>
+<li>Does this event happen more than 100 times a month?</li>
+<li>Is there a way to check whether the alert was right?</li>
+</ol>
+<p>How to read it: 1 = yes gives <span class="lvl n3">N3</span>. If 1 = no and 2 or 3 = yes (or the action has effects outside the control room), <span class="lvl n2">N2</span>. Otherwise, <span class="lvl">N1</span>. And 4 = no gives <span class="lvl lock">Lock</span>, whatever the earlier result.</p>
+
+<h3 id="matriz">Action matrix by reversibility</h3>
+<p>The level comes from the worst action the alert can trigger. Authority follows reversibility, not how important the action looks.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Action</th><th scope="col">Reversibility</th><th scope="col">Minimum level</th></tr></thead>
+<tbody>
+<tr><td>Tag footage, bring a camera up on the wall, open an internal ticket</td><td>Reversible, logged</td><td><span class="lvl">N1</span></td></tr>
+<tr><td>Recommend moving staff</td><td>Reversible, with effects outside the control room</td><td><span class="lvl n2">N2</span></td></tr>
+<tr><td>Write an incident into the client's system</td><td>Partly reversible</td><td><span class="lvl n2">N2</span></td></tr>
+<tr><td>Query a watch list or another company's records</td><td>The query can be undone, the exposure cannot</td><td><span class="lvl n2">N2</span></td></tr>
+<tr><td>Dispatch a field team</td><td>Hard to undo</td><td><span class="lvl n3">N3</span></td></tr>
+<tr><td>Approach a person, block access, call the police, stop operations</td><td>Hard or impossible to undo</td><td><span class="lvl n3">N3</span></td></tr>
+</tbody></table></div>
+<p>Add the rows for your case, but never remove the last one. Common mistakes: declaring the level of a system instead of a case; reading N3 as "more autonomous AI"; forgetting the Lock because the table said N1; not recording the row; never reviewing.</p>
+
+<h2 id="prompt">3. Prompt with harness</h2>
+<p>The same alert in two prompts: <strong>A</strong>, the bare model, and <strong>B</strong>, the model with a harness. Five minutes is enough to see what the harness changes.</p>
+<div class="callout"><span class="lbl">Fictitious alerts only</span><p>Do not paste real faces, plates, names or images of people into a general-purpose assistant. Personal data handling follows the applicable privacy law and your company's policy.</p></div>
+<pre><code>ALERT 02:47 · camera 14 · industrial site
+Event: perimeter intrusion
+Model confidence: 71%
+Light rain. One operator on shift; 38 alerts in the last hour.</code></pre>
+<h3>Prompt A, bare model</h3>
+<pre><code>I am an operator in a CCTV monitoring center. I just got this alert:
+
+&lt;ALERT&gt;
+
+What should I do?</code></pre>
+<h3>Prompt B, model + harness</h3>
+<pre><code>You are the assistant in the monitoring center of an operation in the "&lt;SECTOR&gt;" sector.
+You decide nothing: you help the operator decide.
+
+Alert received:
+&lt;TIME&gt; · &lt;CAMERA&gt; · &lt;EVENT&gt; · model confidence &lt;X&gt;% · &lt;CONDITIONS&gt;
+
+Rules of this operation (harness):
+1. Every alert is a hypothesis, never proof.
+2. Control level for this case: &lt;N1, N2 or N3&gt; (&lt;who decides&gt;).
+3. Never recommend an action that is hard to undo (approaching a person,
+   calling the police, blocking access, stopping operations) without human
+   confirmation on video.
+4. The operator is tired and alone: be short and concrete.
+
+Answer in 120 words or fewer, in this format:
+A) Most likely hypothesis and two alternatives, including a false positive.
+B) What to check in the next 60 seconds, in order.
+C) Who decides and when to escalate.
+D) What to record in the shift report.
+E) What you do not know and would need to know.</code></pre>
+<h3>Running them side by side</h3>
+<ol>
+<li>Open a new conversation in an assistant you already use and paste prompt A.</li>
+<li>Open another new conversation, in the same assistant, and paste prompt B. A fresh conversation keeps B from inheriting A's context.</li>
+<li>Compare: is it shorter? Did it ask to verify before acting? Did it say who decides? Did it admit what it does not know? Did it remember to log? Did it list a false positive among the alternatives?</li>
+<li>If B recommended an action that is hard to undo without confirmation on video, the harness failed and needs reinforcement.</li>
+<li>Decide: <strong>which answer would you hand your operator at 3 a.m.?</strong></li>
+</ol>
+<p>If the case is under Lock, the exercise still shows the difference, but the case cannot be delegated yet. Version the prompt and record which version was in use for each alert. The <a href="skills.html#triagem-de-alerta">triagem-de-alerta</a> skill applies this format.</p>
+
+<h2 id="checklist">4. Pre-launch checklist</h2>
+<p>Ten items before turning on analytics or an AI assistant on a real camera. <strong>It is a gate, not a grade:</strong> nine "yes" and one "no" means a gap with a name, and that is exactly where the next incident will come through.</p>
+<ul class="checklist">
+<li>The use case is written in one sentence: camera, event, decision.</li>
+<li>The control level is declared, and the table row that set it is on record.</li>
+<li>There is a way to check the alert.</li>
+<li>It is defined who confirms, who authorizes, and how fast.</li>
+<li>The interface lets the operator disagree, and the disagreement is logged.</li>
+<li>The false-positive target per thousand alerts was agreed before go-live.</li>
+<li>Operator load (alerts per hour) is measured the way downtime is.</li>
+<li>Camera, network or server failure shows as a failure, never as "nothing happened".</li>
+<li>Every alert, decision and action is logged with a timestamp.</li>
+<li>There is a fixed date to review the harness with what happened.</li>
+</ul>
+<p><strong>How to read it.</strong> "No" on item 3: the case is under Lock, do not turn it on. "No" on items 1, 2 or 4: go back to Map. "No" on items 5 to 9: run in observation only, with no automatic actions, until the gaps are closed. "No" on item 10: set the date now. Every "no" becomes an open item with an owner and a deadline.</p>
+
+<h2 id="sensores">5. Sensors</h2>
+<p>Three rules apply to all of them: the evaluator is not the executor; every alert counts, not a hand-picked sample; every sensor has a limit and an owner.</p>
+<h3>False positives per thousand alerts</h3>
+<dl class="sensor"><dt>Calculation</dt><dd>(alerts dismissed as false ÷ alerts checked) × 1,000, per camera and per event.</dd><dt>Limit</dt><dd>The target agreed before go-live, written in the contract.</dd><dt>Trap</dt><dd>Counting unchecked alerts as hits. With no logged decision, an alert is "unchecked".</dd></dl>
+<h3>Time to triage</h3>
+<dl class="sensor"><dt>Calculation</dt><dd>Median and worst case (or 90th percentile) from alert arrival to first logged decision, per shift and per level.</dd><dt>Limit</dt><dd>The contract deadline. E.g.: critical alarm triaged within 5 minutes.</dd><dt>Trap</dt><dd>Measuring only the average. A critical alert forgotten for half an hour disappears inside a good average.</dd></dl>
+<h3>Alerts per operator per hour</h3>
+<dl class="sensor"><dt>Calculation</dt><dd>Alerts received ÷ operators on shift ÷ hours, by hour of day.</dd><dt>Limit</dt><dd>Agreed with the control room lead before go-live.</dd><dt>Trap</dt><dd>Looking only at the daily total. The load that matters is the peak, at night, with one operator alone.</dd></dl>
+<h3>Logged disagreements</h3>
+<dl class="sensor"><dt>Calculation</dt><dd>Disagreements ÷ alerts checked, with reasons grouped (scene, weather, rule, context the AI lacked).</dd><dt>Limit</dt><dd>There is no right value. Zero disagreements for weeks is a warning sign: either the interface does not allow it, or nobody is looking.</dd><dt>Trap</dt><dd>An interface with no disagreement field. That is a design defect, not an operator one.</dd></dl>
+<h3>Infrastructure failure</h3>
+<dl class="sensor"><dt>Calculation</dt><dd>Availability per camera (time with a valid image ÷ total time) and failure alerts per week.</dd><dt>Limit</dt><dd>Any camera in an N2 or N3 case that goes down alerts the operator immediately.</dd><dt>Trap</dt><dd>A dashboard that only shows detected events. A dead camera and a quiet area look the same.</dd></dl>
+
+<h3 id="registro">Minimum record for every alert</h3>
+<pre><code>date and time of the alert
+camera and event
+confidence reported by the model
+contract and prompt version in use
+control level of the case
+operator decision (confirmed, dismissed, escalated) and time
+disagreement (yes or no) and reason
+action taken, who authorized it, and time
+infrastructure failure involved (yes or no)</code></pre>
+<p>The contract and prompt version is the most forgotten field and one of the most important: without it, a change in behavior after a rule change or a model swap has no explanation.</p>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>

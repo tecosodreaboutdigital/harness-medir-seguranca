@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inspecionar · Harness MEDIR para segurança eletrônica</title>
+<meta name="description" content="Passo 4 do ciclo MEDIR: medir a IA e a central com sensores que produzem evidência, não opinião, e garantir que falha de infraestrutura nunca apareça como &quot;nada aconteceu&quot;.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/inspecionar.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/inspecionar.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/inspecionar.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/inspecionar.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/inspecionar.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harness MEDIR para segurança eletrônica">
+<meta property="og:title" content="Inspecionar · Harness MEDIR para segurança eletrônica">
+<meta property="og:description" content="Passo 4 do ciclo MEDIR: medir a IA e a central com sensores que produzem evidência, não opinião, e garantir que falha de infraestrutura nunca apareça como &quot;nada aconteceu&quot;.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/inspecionar.html">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harness MEDIR para segurança eletrônica: o alerta é hipótese, o operador confirma.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inspecionar · Harness MEDIR para segurança eletrônica">
+<meta name="twitter:description" content="Passo 4 do ciclo MEDIR: medir a IA e a central com sensores que produzem evidência, não opinião, e garantir que falha de infraestrutura nunca apareça como &quot;nada aconteceu&quot;.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>segurança</span></a>
+<nav class="lang" aria-label="Idioma"><a href="inspecionar.html" hreflang="pt-BR" lang="pt-BR" aria-current="true">PT</a><a href="en/inspecionar.html" hreflang="en" lang="en">EN</a><a href="es/inspecionar.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="index.html#medir">Ciclo MEDIR</a><a href="modelos.html">Modelos</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<ol class="steps" aria-label="Os cinco passos do ciclo MEDIR">
+<li><a href="mapear.html"><b>M</b><span class="nm">Mapear</span></a></li>
+<li><a href="equipar.html"><b>E</b><span class="nm">Equipar</span></a></li>
+<li><a href="delegar.html"><b>D</b><span class="nm">Delegar</span></a></li>
+<li><span aria-current="step"><b>I</b><span class="nm">Inspecionar</span></span></li>
+<li><a href="reforcar.html"><b>R</b><span class="nm">Reforçar</span></a></li>
+</ol>
+<main id="conteudo" class="page">
+<p class="eyebrow">Passo 4 de 5 · I</p>
+<h1>Inspecionar</h1>
+<p class="deck">Como sabemos que está funcionando? Com sensores que produzem evidência. "O operador está gostando" é opinião.</p>
+
+<h2 id="proposito">Para que serve</h2>
+<p>Medir o comportamento da IA e da central de um jeito que qualquer pessoa possa conferir no registro. Uma frase como "os falsos positivos caíram de 180 para 60 a cada mil alertas, e a mediana até a triagem ficou abaixo de 2 minutos" (números ilustrativos) é evidência.</p>
+<p><strong>Quem avalia não é quem executa:</strong> a IA não atesta a própria taxa de acerto. A conferência vem do operador, do vídeo gravado, de um segundo sensor ou de quem foi a campo.</p>
+<div class="callout"><span class="lbl">Silêncio não é segurança</span><p>Uma câmera caída que some do painel parece uma noite tranquila. Falha de câmera, rede ou servidor precisa aparecer como falha, nunca como "nada aconteceu". A skill <a href="skills.html#saude-da-operacao">saude-da-operacao</a> mostra como.</p></div>
+
+<h2 id="perguntas">Perguntas</h2>
+<ol>
+<li>Quais sensores estão ligados desde o primeiro dia, e de onde vêm os dados de cada um?</li>
+<li>A meta de falsos positivos a cada mil alertas foi combinada antes de ligar?</li>
+<li>A carga do operador (alertas por operador por hora) é medida como se mede downtime?</li>
+<li>As discordâncias do operador ficam registradas, com motivo?</li>
+<li>Falha de câmera, rede ou servidor aparece como falha, ou some como "nada aconteceu"?</li>
+<li>Quem olha esses números, com que frequência, e o que acontece quando um deles passa do limite?</li>
+</ol>
+
+<h2 id="saidas">O que sai daqui</h2>
+<ul>
+<li>Os sensores escolhidos, com definição, fonte e limite (veja <a href="modelos.html#sensores">sensores</a>).</li>
+<li>O registro de cada alerta, decisão e ação, com horário.</li>
+<li>Uma revisão periódica com data marcada, em que os números são lidos por quem pode mudar o harness.</li>
+</ul>
+
+<h2 id="exemplos">No CFTV</h2>
+<ul>
+<li><strong>Sites remotos de energia.</strong> Critério de piloto: alarme crítico triado em até 5 minutos. O sensor é o tempo entre o alerta e a primeira decisão registrada, medido em todos os alertas, não numa amostra escolhida.</li>
+<li><strong>Grandes eventos.</strong> Cada recomendação de remanejamento tem aceite ou recusa registrados. A taxa de recusa, lida com os motivos, mostra onde a recomendação está desalinhada com o comando.</li>
+<li><strong>Indústria.</strong> O sensor de disponibilidade por câmera separa silêncio de cegueira.</li>
+<li><strong>Varejo.</strong> Se os alertas por operador por hora dobraram depois do analítico novo, o ganho de IA virou aumento de volume. O projeto falhou, mesmo com taxa de acerto alta.</li>
+</ul>
+
+<h2 id="antipadroes">Antipadrões</h2>
+<ul>
+<li><strong>Medir só a taxa de acerto do fornecedor.</strong> O número de laboratório não diz nada sobre a sua cena, a sua iluminação e a sua chuva.</li>
+<li><strong>Amostrar os bons casos.</strong> Revisar só os alertas que viraram ocorrência esconde os falsos positivos e todo o custo de operador.</li>
+<li><strong>Tratar ausência de alerta como sucesso.</strong> Sem sensor de infraestrutura, câmera cega e câmera tranquila parecem iguais.</li>
+<li><strong>Interface que não deixa discordar.</strong> Se o operador não consegue registrar "a IA errou", o sensor de discordância não existe, e o defeito é de projeto, não de operador.</li>
+<li><strong>Número sem dono.</strong> Indicador que ninguém lê em data marcada é decoração.</li>
+</ul>
+<nav class="pager" aria-label="Os cinco passos do ciclo MEDIR"><a class="prev" href="delegar.html"><small>Passo anterior</small>Delegar</a><a class="next" href="reforcar.html"><small>Próximo passo</small>Reforçar</a></nav>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER e AVANTIA. Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>: use e adapte, citando a fonte.</p>
+<p>Derivado de <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a>, de Teco Sodré. Código e histórico no <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">repositório</a>, onde a comunidade contribui por issue ou pull request.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Map · The MEDIR harness for security operations</title>
+<meta name="description" content="Step 1 of the MEDIR cycle: turn &quot;we want AI on the cameras&quot; into one camera, one event and one decision, and set the control level before anyone talks about vendors.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/mapear.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/mapear.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/mapear.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/mapear.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/mapear.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="Map · The MEDIR harness for security operations">
+<meta property="og:description" content="Step 1 of the MEDIR cycle: turn &quot;we want AI on the cameras&quot; into one camera, one event and one decision, and set the control level before anyone talks about vendors.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/mapear.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Map · The MEDIR harness for security operations">
+<meta name="twitter:description" content="Step 1 of the MEDIR cycle: turn &quot;we want AI on the cameras&quot; into one camera, one event and one decision, and set the control level before anyone talks about vendors.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../mapear.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="mapear.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/mapear.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<ol class="steps" aria-label="The five steps of the MEDIR cycle">
+<li><span aria-current="step"><b>M</b><span class="nm">Map</span></span></li>
+<li><a href="equipar.html"><b>E</b><span class="nm">Equip</span></a></li>
+<li><a href="delegar.html"><b>D</b><span class="nm">Delegate</span></a></li>
+<li><a href="inspecionar.html"><b>I</b><span class="nm">Inspect</span></a></li>
+<li><a href="reforcar.html"><b>R</b><span class="nm">Reinforce</span></a></li>
+</ol>
+<main id="conteudo" class="page">
+<p class="eyebrow">Step 1 of 5 · M</p>
+<h1>Map</h1>
+<p class="deck">Which task, at what risk? "We want AI on the cameras" is not a task. One camera, one event and one decision is.</p>
+
+<h2 id="proposito">What it is for</h2>
+<p>Map is where the <strong>control level</strong> gets decided, before any conversation about tools, models or vendors. The unit is always the same: <strong>one camera, one event, one decision.</strong></p>
+<p>Without that scope, no later sensor can tell whether the AI got it right, because nobody said in advance what right looked like. And the night-shift operator ends up receiving alerts from a system nobody knows how to judge.</p>
+
+<h2 id="perguntas">Questions</h2>
+<ol>
+<li>Which camera (or group of cameras with the same scene), which event, and which decision will the alert feed?</li>
+<li>Who makes that decision today, without AI, and how fast?</li>
+<li>What does a false positive cost? And a false negative? In people, operator time, money, reputation.</li>
+<li>How many times a month does the event happen, and how many alerts a month do you expect?</li>
+<li>What must never happen, even if the AI is right? (stopping the wrong person, blocking an emergency exit, halting a production line)</li>
+<li>When the alert fires, does someone act in the real world in a way that is hard to undo?</li>
+<li>Does the system need to read from or write to another company's or the client's system?</li>
+<li>Is there a way to check whether the alert was right? (second sensor, recorded video, check on site)</li>
+<li>Out of every thousand alerts, how many false ones will you accept before reviewing the system?</li>
+</ol>
+<div class="callout"><span class="lbl">Shortcut</span><p>Questions 4, 6, 7 and 8 set the control level. See the <a href="modelos.html#perguntas">four questions</a> and the <a href="modelos.html#nivel">full table</a>.</p></div>
+
+<h2 id="saidas">What comes out</h2>
+<ul>
+<li>The use case in one sentence.</li>
+<li>The control level and <strong>the table row that set it</strong>.</li>
+<li>The false-positive target per thousand alerts, agreed before go-live.</li>
+<li>The list of things that must never happen.</li>
+<li>A filled-in <a href="modelos.html#contrato">task contract</a>, with gaps marked as open items.</li>
+</ul>
+
+<h2 id="exemplos">In CCTV</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Sector</th><th scope="col">Camera, event, decision</th></tr></thead>
+<tbody>
+<tr><td>Industrial site</td><td>Pedestrian gate camera; someone entering without passing the turnstile; the operator decides whether to call the guards.</td></tr>
+<tr><td>Bulk terminal</td><td>Weighbridge camera; a truck weighed with no arrival record; the operator decides whether to open an incident before unloading.</td></tr>
+<tr><td>Remote energy sites</td><td>Thermal perimeter camera; smoke outside the fence; the operator decides whether to dispatch a team.</td></tr>
+<tr><td>Large events</td><td>Cameras on one entrance; queue longer than agreed; the command post decides whether to move staff.</td></tr>
+<tr><td>Retail</td><td>Loading dock camera; goods leaving outside shipping hours; the operator decides whether to call the store supervisor.</td></tr>
+<tr><td>Residential building</td><td>Garage camera; a car tailgating another through the gate; the operator decides whether to call the front desk.</td></tr>
+</tbody></table></div>
+
+<h2 id="antipadroes">Anti-patterns</h2>
+<ul>
+<li><strong>Mapping the product instead of the task.</strong> "Let's turn on perimeter analytics on every camera" is not a use case. Each scene has a different cost of error.</li>
+<li><strong>Skipping the cost of a false positive.</strong> If nobody knows what a false alarm costs, the target becomes an opinion once the system is already live.</li>
+<li><strong>Letting the vendor set the level.</strong> "This system is N1" does not exist. The same equipment can be N1 in one scene and N3 in another.</li>
+<li><strong>Leaving "must never happen" implicit.</strong> Whatever is not written down will be discovered in operation, the hard way.</li>
+<li><strong>Mapping without asking the operator.</strong> Whoever spends eight hours in front of the video wall knows how many useless alerts already come in.</li>
+</ul>
+<p>To run this step with an agent, use the <a href="skills.html#mapear-camera">mapear-camera</a> skill.</p>
+<nav class="pager" aria-label="The five steps of the MEDIR cycle"><a class="next" href="equipar.html"><small>Next step</small>Equip</a></nav>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>

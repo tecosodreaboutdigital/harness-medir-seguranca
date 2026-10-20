@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equip · The MEDIR harness for security operations</title>
+<meta name="description" content="Step 2 of the MEDIR cycle: give the model a role, the protocol, the control level, a short answer format and the minimum tools, and nothing more.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/equipar.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/equipar.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/equipar.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/equipar.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/equipar.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="Equip · The MEDIR harness for security operations">
+<meta property="og:description" content="Step 2 of the MEDIR cycle: give the model a role, the protocol, the control level, a short answer format and the minimum tools, and nothing more.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/equipar.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Equip · The MEDIR harness for security operations">
+<meta name="twitter:description" content="Step 2 of the MEDIR cycle: give the model a role, the protocol, the control level, a short answer format and the minimum tools, and nothing more.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../equipar.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="equipar.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/equipar.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<ol class="steps" aria-label="The five steps of the MEDIR cycle">
+<li><a href="mapear.html"><b>M</b><span class="nm">Map</span></a></li>
+<li><span aria-current="step"><b>E</b><span class="nm">Equip</span></span></li>
+<li><a href="delegar.html"><b>D</b><span class="nm">Delegate</span></a></li>
+<li><a href="inspecionar.html"><b>I</b><span class="nm">Inspect</span></a></li>
+<li><a href="reforcar.html"><b>R</b><span class="nm">Reinforce</span></a></li>
+</ol>
+<main id="conteudo" class="page">
+<p class="eyebrow">Step 2 of 5 · E</p>
+<h1>Equip</h1>
+<p class="deck">What does the model need to know and be able to do? The minimum to help a tired operator decide, and nothing more.</p>
+
+<h2 id="proposito">What it is for</h2>
+<p>Equipping means writing the harness: role, protocol, control level, answer format, and what the model does not know. The model helps the operator decide. It does not decide.</p>
+<p>The sizing rule matters more here than anywhere else: <strong>the harness must be smaller than the failure surface it controls.</strong> Every extra tool is one more way to fail, and at 3 a.m. nobody has time to find out which.</p>
+
+<h2 id="perguntas">Questions</h2>
+<ol>
+<li>What is the model's role in this control room? (helping the operator decide, never deciding)</li>
+<li>Which part of the control room protocol applies to this event?</li>
+<li>What is the control level, and who decides at each step?</li>
+<li>What format does the operator need, knowing they are tired, alone and have other alerts waiting?</li>
+<li>Which tools does the model really need? Query recorded video? Open a ticket? Anything else?</li>
+<li>What does the model not know, and needs to say it does not know? (camera condition, who is on duty, whether the area was cleared)</li>
+<li>Where do decisions live once the conversation is over?</li>
+</ol>
+
+<h2 id="saidas">What comes out</h2>
+<ul>
+<li>The prompt with harness for this task, versioned (see <a href="modelos.html#prompt">prompt with harness</a>).</li>
+<li>A closed list of tools, each with what it does and how it fails.</li>
+<li>The answer format, with a length limit.</li>
+<li>Where every alert, decision and action is logged (see the <a href="modelos.html#registro">minimum record</a>).</li>
+</ul>
+
+<h2 id="exemplos">In CCTV</h2>
+<ul>
+<li><strong>Short, fixed answer.</strong> Most likely hypothesis and two alternatives, one of them a false positive; what to check in the next 60 seconds; who decides and when to escalate; what to log; what it does not know. 120 words at most.</li>
+<li><strong>Minimal tools at remote energy sites.</strong> The model may pull the last few minutes of recorded video and open a ticket linked to the alert. It may not release the digital key to the equipment cabinet.</li>
+<li><strong>Minimal tools in a residential building.</strong> The model may bring the camera up on the video wall and draft the message to the front desk. The operator is the one who talks to the front desk.</li>
+<li><strong>Shift context.</strong> Telling the model how many alerts the operator received in the last hour changes the answer: with 38 alerts in the queue, the recommendation has to be shorter and more selective.</li>
+</ul>
+<div class="callout"><span class="lbl">Integrations</span><p>Connecting the model to the video management system, access control or infrastructure monitoring always starts read-only. The <a href="skills.html#integracao-vms">integracao-vms</a>, <a href="skills.html#integracao-controle-de-acesso">integracao-controle-de-acesso</a> and <a href="skills.html#saude-da-operacao">saude-da-operacao</a> skills show the pattern.</p></div>
+
+<h2 id="antipadroes">Anti-patterns</h2>
+<ul>
+<li><strong>A prompt with no role.</strong> "What should I do?" gets a generic, long, overconfident answer. Compare in the A versus B exercise.</li>
+<li><strong>Too many tools.</strong> Giving the model access control, watch lists and people records "because it might be useful" widens the failure surface and raises the control level.</li>
+<li><strong>A harness that lives in someone's head.</strong> A rule that is not written in the prompt, the protocol or the configuration is not a rule.</li>
+<li><strong>Forgetting what the model does not know.</strong> A model that never says "I don't know" makes things up with the same confidence it uses when it is right.</li>
+<li><strong>Real data in a public assistant.</strong> Test prompts with fictitious alerts. Real faces, plates and names do not go into general-purpose assistants; personal data handling follows the applicable privacy law and your company's policy.</li>
+</ul>
+<nav class="pager" aria-label="The five steps of the MEDIR cycle"><a class="prev" href="mapear.html"><small>Previous step</small>Map</a><a class="next" href="delegar.html"><small>Next step</small>Delegate</a></nav>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>

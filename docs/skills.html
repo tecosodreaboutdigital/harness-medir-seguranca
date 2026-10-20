@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills · Harness MEDIR para segurança eletrônica</title>
+<meta name="description" content="Sete skills no formato aberto Agent Skills para levar o harness MEDIR a um agente de IA numa central: mapear câmera, triagem de alerta, revisão de nível, integrações somente leitura e um servidor MCP desenhado com harness.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/skills.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/skills.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/skills.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/skills.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/skills.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harness MEDIR para segurança eletrônica">
+<meta property="og:title" content="Skills · Harness MEDIR para segurança eletrônica">
+<meta property="og:description" content="Sete skills no formato aberto Agent Skills para levar o harness MEDIR a um agente de IA numa central: mapear câmera, triagem de alerta, revisão de nível, integrações somente leitura e um servidor MCP desenhado com harness.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/skills.html">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harness MEDIR para segurança eletrônica: o alerta é hipótese, o operador confirma.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skills · Harness MEDIR para segurança eletrônica">
+<meta name="twitter:description" content="Sete skills no formato aberto Agent Skills para levar o harness MEDIR a um agente de IA numa central: mapear câmera, triagem de alerta, revisão de nível, integrações somente leitura e um servidor MCP desenhado com harness.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>segurança</span></a>
+<nav class="lang" aria-label="Idioma"><a href="skills.html" hreflang="pt-BR" lang="pt-BR" aria-current="true">PT</a><a href="en/skills.html" hreflang="en" lang="en">EN</a><a href="es/skills.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="index.html#medir">Ciclo MEDIR</a><a href="modelos.html">Modelos</a><a href="skills.html" aria-current="page">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<main id="conteudo" class="page">
+<p class="eyebrow">Skills para agentes</p>
+<h1>O harness escrito para a máquina seguir</h1>
+<p class="deck">Uma skill não é um atalho para dar mais poder ao agente. É o harness numa forma que ele consegue seguir: o que pode fazer, o que nunca faz e quem confirma.</p>
+<nav class="toc" aria-label="Nesta página"><p>Nesta página</p><ol>
+<li><a href="#formato">Formato e instalação</a></li>
+<li><a href="#catalogo">As sete skills</a></li>
+<li><a href="#seguranca">Revisão de segurança das integrações</a></li>
+</ol></nav>
+
+<h2 id="formato">Formato e instalação</h2>
+<p>As skills seguem o formato aberto Agent Skills: uma pasta por skill, com um arquivo <code>SKILL.md</code> que começa com <code>name</code> e <code>description</code> em YAML. Qualquer agente compatível com esse formato pode carregá-las. As instruções estão em português, com um resumo curto em inglês no topo de cada arquivo.</p>
+<ol>
+<li>Abra a pasta <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills">skills/</a> do repositório e <strong>leia o <code>SKILL.md</code> inteiro</strong>. Uma skill que você não leu é uma instrução desconhecida rodando dentro do seu agente.</li>
+<li>Copie a pasta da skill para o diretório de skills do seu agente (no Claude Code, por exemplo, <code>.claude/skills/</code> no projeto).</li>
+<li>Teste com um alerta fictício antes de qualquer dado real.</li>
+</ol>
+<div class="callout"><span class="lbl">Seção obrigatória</span><p>Toda skill deste repositório tem uma seção <strong>Harness desta skill</strong> com três linhas: o que ela <strong>pode</strong> fazer, o que ela <strong>nunca</strong> faz e <strong>quem confirma</strong>. Skill sem essa seção não entra.</p></div>
+
+<h2 id="catalogo">As sete skills</h2>
+
+<section class="skill" id="mapear-camera" aria-labelledby="t-mapear-camera">
+<h3 id="t-mapear-camera">mapear-camera</h3>
+<p class="meta">Passo Mapear · entrevista e contrato</p>
+<p>Entrevista sobre uma câmera, um evento e uma decisão. Devolve o contrato de tarefa preenchido, o nível de controle e a linha da tabela que o definiu. O que o usuário não sabe vira pendência com dono, nunca palpite.</p>
+<div class="harness"><div><b>Pode</b>perguntar, redigir, aplicar a tabela, marcar pendências</div><div><b>Nunca</b>inventar resposta, baixar o nível por pressa, aceitar dado pessoal real</div><div><b>Quem confirma</b>a pessoa responsável pelo contrato</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/mapear-camera/SKILL.md">Ler a skill</a></p>
+</section>
+
+<section class="skill" id="triagem-de-alerta" aria-labelledby="t-triagem-de-alerta">
+<h3 id="t-triagem-de-alerta">triagem-de-alerta</h3>
+<p class="meta">Passo Equipar · o prompt com harness, permanente</p>
+<p>Recebe um alerta e responde no formato A a E, em até 120 palavras: hipóteses com falso positivo, o que verificar em 60 segundos, quem decide, o que registrar, o que não sabe. Lê o nível do caso e o selo de integridade do dado.</p>
+<div class="harness"><div><b>Pode</b>propor hipóteses, verificações e o texto do registro</div><div><b>Nunca</b>decidir ou recomendar ação difícil de desfazer sem confirmação no vídeo</div><div><b>Quem confirma</b>o operador; em N3, outra pessoa autoriza</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/triagem-de-alerta/SKILL.md">Ler a skill</a></p>
+</section>
+
+<section class="skill" id="revisar-nivel-de-controle" aria-labelledby="t-revisar-nivel-de-controle">
+<h3 id="t-revisar-nivel-de-controle">revisar-nivel-de-controle</h3>
+<p class="meta">Passos Delegar e Inspecionar · auditoria</p>
+<p>Audita uma operação com analíticos já ligados: refaz a frase de cada caso, aplica a tabela, compara com o nível declarado, passa o checklist e devolve as lacunas em ordem de gravidade, começando por caso em Trava rodando com ação automática.</p>
+<div class="harness"><div><b>Pode</b>ler, perguntar, classificar e apontar lacunas</div><div><b>Nunca</b>mudar configuração, "aprovar" a operação, culpar o operador</div><div><b>Quem confirma</b>a coordenação da central, pendência por pendência</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/revisar-nivel-de-controle/SKILL.md">Ler a skill</a></p>
+</section>
+
+<section class="skill" id="integracao-vms" aria-labelledby="t-integracao-vms">
+<h3 id="t-integracao-vms">integracao-vms</h3>
+<p class="meta">Passo Equipar · sistema de gravação, somente leitura</p>
+<p>Como levar alertas do sistema de gravação até o assistente por eventos ONVIF, REST ou webhook assinado, sem caminho de volta. Traz uma mensagem ONVIF fictícia, um payload de webhook e um servidor mock em Python (só biblioteca padrão) que confere HMAC e timestamp, recusa replay e descarta campos fora da lista.</p>
+<div class="harness"><div><b>Pode</b>receber, conferir, normalizar e guardar eventos para leitura</div><div><b>Nunca</b>mover câmera, exportar ou apagar gravação, mudar regra de analítico</div><div><b>Quem confirma</b>o dono do sistema aprova credencial e escopo; o operador, cada ação</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills/integracao-vms">Ler a skill e os exemplos</a></p>
+</section>
+
+<section class="skill" id="integracao-controle-de-acesso" aria-labelledby="t-integracao-controle-de-acesso">
+<h3 id="t-integracao-controle-de-acesso">integracao-controle-de-acesso</h3>
+<p class="meta">Passo Equipar · controle de acesso e RH, somente leitura</p>
+<p>Webhook somente leitura para eventos como credencial revogada, desligamento e tentativa com credencial revogada, com pessoa identificada só por id pseudônimo. Inclui notas de LGPD para biometria: dado sensível (art. 11), base legal, retenção, registro e auditoria.</p>
+<div class="harness"><div><b>Pode</b>receber eventos, alertar o operador, abrir pendência de remoção</div><div><b>Nunca</b>liberar, bloquear, criar ou excluir credencial ou cadastro biométrico</div><div><b>Quem confirma</b>o operador no vídeo; o administrador remove; o encarregado de dados define base e prazo</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills/integracao-controle-de-acesso">Ler a skill e os exemplos</a></p>
+</section>
+
+<section class="skill" id="saude-da-operacao" aria-labelledby="t-saude-da-operacao">
+<h3 id="t-saude-da-operacao">saude-da-operacao</h3>
+<p class="meta">Passo Inspecionar · selo de integridade do dado</p>
+<p>Sinais de saúde (Zabbix, SNMP, ping, HTTP, gravação, relógio) viram um selo em todo número e todo alerta: <strong>íntegro</strong>, <strong>estimado</strong>, <strong>atrasado</strong> ou <strong>sem dado</strong>. O pior selo vence, zero só aparece com selo íntegro, e falha de infraestrutura nunca aparece como "nada aconteceu".</p>
+<div class="harness"><div><b>Pode</b>ler sinais, calcular o selo, alertar, abrir chamado de manutenção</div><div><b>Nunca</b>reiniciar equipamento, silenciar problema, mostrar zero sem dado</div><div><b>Quem confirma</b>o operador encaminha; a manutenção confirma causa e reparo</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills/saude-da-operacao">Ler a skill e o exemplo</a></p>
+</section>
+
+<section class="skill" id="mcp-central" aria-labelledby="t-mcp-central">
+<h3 id="t-mcp-central">mcp-central</h3>
+<p class="meta">Passos Equipar e Delegar · desenho de servidor MCP</p>
+<p>Documento de desenho de um servidor MCP com três ferramentas: <code>consultar_alerta</code>, <code>abrir_chamado</code> e <code>pedir_trecho_de_video</code>. Cada uma com escopo, limite de taxa, regra de confirmação, auditoria e erros que dizem o próximo passo. Ações N3 ficam de fora de propósito: a ferramenta mais segura é a que não existe.</p>
+<div class="harness"><div><b>Pode</b>orientar desenho, revisão e implementação</div><div><b>Nunca</b>propor ferramenta irreversível ou confirmação feita pelo próprio modelo</div><div><b>Quem confirma</b>o operador, no console; a coordenação aprova ferramenta nova</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/mcp-central/SKILL.md">Ler o desenho</a></p>
+</section>
+
+<h2 id="seguranca">Revisão de segurança das integrações</h2>
+<p>As skills que tocam sistemas (gravação, controle de acesso, saúde da operação e o servidor MCP) trazem a mesma revisão mínima. Um "não" é pendência com dono, antes de ligar.</p>
+<ul class="checklist">
+<li><strong>Autenticação</strong> em todo canal; nada anônimo.</li>
+<li><strong>Menor privilégio:</strong> a credencial só lê o que o caso precisa.</li>
+<li><strong>Somente leitura por padrão;</strong> escrever em sistema de terceiro é decisão registrada e sobe o nível.</li>
+<li><strong>Segredos fora do repositório,</strong> em variável de ambiente ou cofre, com rotação.</li>
+<li><strong>Log sem dado pessoal:</strong> id, tipo, horário e resultado; nunca imagem, rosto, placa ou nome.</li>
+<li><strong>Limite de taxa</strong> e de tamanho, com erro que diz o que fazer.</li>
+<li><strong>Proteção contra replay</strong> em webhooks: HMAC-SHA256 sobre timestamp e corpo, janela curta, recusa de id repetido.</li>
+</ul>
+<p>Todos os exemplos usam hosts <code>exemplo.local</code>, segredos de teste lidos de variável de ambiente e nenhum dado de sistema real.</p>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER e AVANTIA. Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>: use e adapte, citando a fonte.</p>
+<p>Derivado de <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a>, de Teco Sodré. Código e histórico no <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">repositório</a>, onde a comunidade contribui por issue ou pull request.</p>
+</div></footer>
+</body>
+</html>

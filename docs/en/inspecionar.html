@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inspect · The MEDIR harness for security operations</title>
+<meta name="description" content="Step 4 of the MEDIR cycle: measure the AI and the control room with sensors that produce evidence, not opinions, and make sure an infrastructure failure never shows as &quot;nothing happened&quot;.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/inspecionar.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/inspecionar.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/inspecionar.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/inspecionar.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/inspecionar.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="Inspect · The MEDIR harness for security operations">
+<meta property="og:description" content="Step 4 of the MEDIR cycle: measure the AI and the control room with sensors that produce evidence, not opinions, and make sure an infrastructure failure never shows as &quot;nothing happened&quot;.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/inspecionar.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inspect · The MEDIR harness for security operations">
+<meta name="twitter:description" content="Step 4 of the MEDIR cycle: measure the AI and the control room with sensors that produce evidence, not opinions, and make sure an infrastructure failure never shows as &quot;nothing happened&quot;.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../inspecionar.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="inspecionar.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/inspecionar.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<ol class="steps" aria-label="The five steps of the MEDIR cycle">
+<li><a href="mapear.html"><b>M</b><span class="nm">Map</span></a></li>
+<li><a href="equipar.html"><b>E</b><span class="nm">Equip</span></a></li>
+<li><a href="delegar.html"><b>D</b><span class="nm">Delegate</span></a></li>
+<li><span aria-current="step"><b>I</b><span class="nm">Inspect</span></span></li>
+<li><a href="reforcar.html"><b>R</b><span class="nm">Reinforce</span></a></li>
+</ol>
+<main id="conteudo" class="page">
+<p class="eyebrow">Step 4 of 5 · I</p>
+<h1>Inspect</h1>
+<p class="deck">How do we know it works? With sensors that produce evidence. "The operators like it" is an opinion.</p>
+
+<h2 id="proposito">What it is for</h2>
+<p>Measuring how the AI and the control room behave in a way anyone can verify in the log. A sentence like "false positives dropped from 180 to 60 per thousand alerts, and median time to triage stayed under 2 minutes" (illustrative numbers) is evidence.</p>
+<p><strong>The evaluator is not the executor:</strong> the AI does not vouch for its own accuracy. Verification comes from the operator, the recorded video, a second sensor or whoever went on site.</p>
+<div class="callout"><span class="lbl">Silence is not safety</span><p>A dead camera that drops off the dashboard looks like a quiet night. Camera, network or server failures must show up as failures, never as "nothing happened". The <a href="skills.html#saude-da-operacao">saude-da-operacao</a> skill shows how.</p></div>
+
+<h2 id="perguntas">Questions</h2>
+<ol>
+<li>Which sensors are on from day one, and where does each one get its data?</li>
+<li>Was the false-positive target per thousand alerts agreed before go-live?</li>
+<li>Is operator load (alerts per operator per hour) measured the way downtime is?</li>
+<li>Are operator disagreements logged, with a reason?</li>
+<li>Do camera, network or server failures show up as failures, or vanish as "nothing happened"?</li>
+<li>Who looks at these numbers, how often, and what happens when one crosses its limit?</li>
+</ol>
+
+<h2 id="saidas">What comes out</h2>
+<ul>
+<li>The chosen sensors, each with a definition, a source and a limit (see <a href="modelos.html#sensores">sensors</a>).</li>
+<li>A record of every alert, decision and action, with timestamps.</li>
+<li>A periodic review on a fixed date, where the numbers are read by people who can change the harness.</li>
+</ul>
+
+<h2 id="exemplos">In CCTV</h2>
+<ul>
+<li><strong>Remote energy sites.</strong> Pilot criterion: critical alarm triaged within 5 minutes. The sensor is the time from the alert to the first logged decision, measured on every alert, not on a hand-picked sample.</li>
+<li><strong>Large events.</strong> Every staffing recommendation has its acceptance or rejection logged. The rejection rate, read together with the reasons, shows where recommendations are out of step with the command post.</li>
+<li><strong>Industrial site.</strong> Per-camera availability tells silence apart from blindness.</li>
+<li><strong>Retail.</strong> If alerts per operator per hour doubled after the new analytics went live, the AI gain turned into more volume. The project failed, even with high accuracy.</li>
+</ul>
+
+<h2 id="antipadroes">Anti-patterns</h2>
+<ul>
+<li><strong>Measuring only the vendor's accuracy.</strong> A lab number says nothing about your scene, your lighting and your rain.</li>
+<li><strong>Sampling the good cases.</strong> Reviewing only alerts that became incidents hides the false positives and the whole operator cost.</li>
+<li><strong>Treating no alerts as success.</strong> Without an infrastructure sensor, a blind camera and a calm camera look the same.</li>
+<li><strong>An interface that does not allow disagreement.</strong> If the operator cannot record "the AI was wrong", the disagreement sensor does not exist, and the defect is in the design, not in the operator.</li>
+<li><strong>A number with no owner.</strong> An indicator nobody reads on a fixed date is decoration.</li>
+</ul>
+<nav class="pager" aria-label="The five steps of the MEDIR cycle"><a class="prev" href="delegar.html"><small>Previous step</small>Delegate</a><a class="next" href="reforcar.html"><small>Next step</small>Reinforce</a></nav>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills · The MEDIR harness for security operations</title>
+<meta name="description" content="Seven skills in the open Agent Skills format that bring the MEDIR harness to an AI agent in a monitoring center: map a camera, triage an alert, review control levels, read-only integrations and an MCP server designed with a harness.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/skills.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/skills.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/skills.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/skills.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/skills.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="Skills · The MEDIR harness for security operations">
+<meta property="og:description" content="Seven skills in the open Agent Skills format that bring the MEDIR harness to an AI agent in a monitoring center: map a camera, triage an alert, review control levels, read-only integrations and an MCP server designed with a harness.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/skills.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skills · The MEDIR harness for security operations">
+<meta name="twitter:description" content="Seven skills in the open Agent Skills format that bring the MEDIR harness to an AI agent in a monitoring center: map a camera, triage an alert, review control levels, read-only integrations and an MCP server designed with a harness.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../skills.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="skills.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/skills.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html">Templates</a><a href="skills.html" aria-current="page">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<main id="conteudo" class="page">
+<p class="eyebrow">Agent skills</p>
+<h1>The harness, written for the machine to follow</h1>
+<p class="deck">A skill is not a shortcut to give an agent more power. It is the harness in a form the agent can follow: what it may do, what it never does and who confirms.</p>
+<nav class="toc" aria-label="On this page"><p>On this page</p><ol>
+<li><a href="#formato">Format and installation</a></li>
+<li><a href="#catalogo">The seven skills</a></li>
+<li><a href="#seguranca">Security review for integrations</a></li>
+</ol></nav>
+
+<h2 id="formato">Format and installation</h2>
+<p>The skills follow the open Agent Skills format: one folder per skill, with a <code>SKILL.md</code> file that starts with <code>name</code> and <code>description</code> in YAML. Any agent that supports the format can load them. Instructions are in Portuguese, with a short English summary at the top of each file.</p>
+<ol>
+<li>Open the repository's <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills">skills/</a> folder and <strong>read the whole <code>SKILL.md</code></strong>. A skill you have not read is an unknown instruction running inside your agent.</li>
+<li>Copy the skill folder into your agent's skills directory (in Claude Code, for example, <code>.claude/skills/</code> in the project).</li>
+<li>Test with a fictitious alert before any real data.</li>
+</ol>
+<div class="callout"><span class="lbl">Mandatory section</span><p>Every skill in this repository has a <strong>harness section</strong> with three lines: what it <strong>may</strong> do, what it must <strong>never</strong> do and <strong>who confirms</strong>. A skill without that section does not get in.</p></div>
+
+<h2 id="catalogo">The seven skills</h2>
+
+<section class="skill" id="mapear-camera" aria-labelledby="t-mapear-camera">
+<h3 id="t-mapear-camera">mapear-camera</h3>
+<p class="meta">Map step · interview and contract</p>
+<p>Interviews the user about one camera, one event and one decision. Returns a filled task contract, the control level and the table row that set it. Whatever the user does not know becomes an open item with an owner, never a guess.</p>
+<div class="harness"><div><b>May</b>ask, draft, apply the table, mark open items</div><div><b>Never</b>invent answers, lower the level to save time, accept real personal data</div><div><b>Who confirms</b>the person who owns the contract</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/mapear-camera/SKILL.md">Read the skill</a></p>
+</section>
+
+<section class="skill" id="triagem-de-alerta" aria-labelledby="t-triagem-de-alerta">
+<h3 id="t-triagem-de-alerta">triagem-de-alerta</h3>
+<p class="meta">Equip step · the prompt with harness, made permanent</p>
+<p>Takes an alert and answers in the A to E format, in 120 words or fewer: hypotheses including a false positive, what to check in 60 seconds, who decides, what to log, what it does not know. It reads the case's control level and the data integrity seal.</p>
+<div class="harness"><div><b>May</b>propose hypotheses, checks and the log text</div><div><b>Never</b>decide, or recommend anything hard to undo without confirmation on video</div><div><b>Who confirms</b>the operator; at N3, another person authorizes</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/triagem-de-alerta/SKILL.md">Read the skill</a></p>
+</section>
+
+<section class="skill" id="revisar-nivel-de-controle" aria-labelledby="t-revisar-nivel-de-controle">
+<h3 id="t-revisar-nivel-de-controle">revisar-nivel-de-controle</h3>
+<p class="meta">Delegate and Inspect steps · audit</p>
+<p>Audits an operation with analytics already running: rebuilds each case's sentence, applies the table, compares it with the declared level, runs the checklist and returns the gaps by severity, starting with Lock cases running automatic actions.</p>
+<div class="harness"><div><b>May</b>read, ask, classify and point out gaps</div><div><b>Never</b>change configuration, "approve" the operation, blame the operator</div><div><b>Who confirms</b>the control room lead, one open item at a time</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/revisar-nivel-de-controle/SKILL.md">Read the skill</a></p>
+</section>
+
+<section class="skill" id="integracao-vms" aria-labelledby="t-integracao-vms">
+<h3 id="t-integracao-vms">integracao-vms</h3>
+<p class="meta">Equip step · video management system, read-only</p>
+<p>How to bring alerts from the video management system to the assistant through ONVIF events, REST or a signed webhook, with no path back. Includes a fictitious ONVIF message, a webhook payload and a Python mock server (standard library only) that checks HMAC and timestamp, rejects replays and drops fields outside an allowlist.</p>
+<div class="harness"><div><b>May</b>receive, verify, normalize and store events for reading</div><div><b>Never</b>move cameras, export or delete recordings, change analytics rules</div><div><b>Who confirms</b>the system owner approves credentials and scope; the operator, each action</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills/integracao-vms">Read the skill and examples</a></p>
+</section>
+
+<section class="skill" id="integracao-controle-de-acesso" aria-labelledby="t-integracao-controle-de-acesso">
+<h3 id="t-integracao-controle-de-acesso">integracao-controle-de-acesso</h3>
+<p class="meta">Equip step · access control and HR, read-only</p>
+<p>Read-only webhook for events such as credential revoked, employee offboarded and attempt with a revoked credential, with people identified only by a pseudonymous id. Includes notes on Brazil's data protection law (LGPD) for biometrics: sensitive data (art. 11), legal basis, retention, records and audit.</p>
+<div class="harness"><div><b>May</b>receive events, alert the operator, open a removal task</div><div><b>Never</b>grant, block, create or delete credentials or biometric records</div><div><b>Who confirms</b>the operator on video; the administrator removes; the data protection officer sets basis and retention</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills/integracao-controle-de-acesso">Read the skill and examples</a></p>
+</section>
+
+<section class="skill" id="saude-da-operacao" aria-labelledby="t-saude-da-operacao">
+<h3 id="t-saude-da-operacao">saude-da-operacao</h3>
+<p class="meta">Inspect step · data integrity seal</p>
+<p>Health signals (Zabbix, SNMP, ping, HTTP, recording status, clock) become a seal on every number and every alert: <strong>intact</strong>, <strong>estimated</strong>, <strong>late</strong> or <strong>no data</strong>. The worst seal wins, zero only shows with an intact seal, and an infrastructure failure never shows as "nothing happened".</p>
+<div class="harness"><div><b>May</b>read signals, compute the seal, alert, open a maintenance ticket</div><div><b>Never</b>restart equipment, silence problems, show zero without data</div><div><b>Who confirms</b>the operator routes it; maintenance confirms cause and repair</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/skills/saude-da-operacao">Read the skill and example</a></p>
+</section>
+
+<section class="skill" id="mcp-central" aria-labelledby="t-mcp-central">
+<h3 id="t-mcp-central">mcp-central</h3>
+<p class="meta">Equip and Delegate steps · MCP server design</p>
+<p>A design document for an MCP server with three tools: <code>consultar_alerta</code> (read an alert), <code>abrir_chamado</code> (open a ticket) and <code>pedir_trecho_de_video</code> (request a video clip). Each one has a scope, a rate limit, a confirmation rule, an audit entry and errors that say what to do next. N3 actions are left out on purpose: the safest tool is the one that does not exist.</p>
+<div class="harness"><div><b>May</b>guide design, review and implementation</div><div><b>Never</b>propose irreversible tools or confirmation by the model itself</div><div><b>Who confirms</b>the operator, in the console; the control room lead approves any new tool</div></div>
+<p><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/skills/mcp-central/SKILL.md">Read the design</a></p>
+</section>
+
+<h2 id="seguranca">Security review for integrations</h2>
+<p>The skills that touch systems (video management, access control, operational health and the MCP server) share the same minimum review. Every "no" is an open item with an owner, before go-live.</p>
+<ul class="checklist">
+<li><strong>Authentication</strong> on every channel; nothing anonymous.</li>
+<li><strong>Least privilege:</strong> credentials read only what the case needs.</li>
+<li><strong>Read-only by default;</strong> writing to a third-party system is a recorded decision and raises the level.</li>
+<li><strong>Secrets out of the repository,</strong> in environment variables or a vault, with rotation.</li>
+<li><strong>Logs without personal data:</strong> id, type, time and result; never images, faces, plates or names.</li>
+<li><strong>Rate and size limits,</strong> with errors that say what to do.</li>
+<li><strong>Replay protection</strong> on webhooks: HMAC-SHA256 over timestamp and body, a short window, duplicate ids rejected.</li>
+</ul>
+<p>All examples use <code>exemplo.local</code> hosts, test secrets read from environment variables and no data from real systems.</p>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>

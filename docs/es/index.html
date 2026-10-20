@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harness MEDIR para seguridad electrónica</title>
+<meta name="description" content="Guía práctica y abierta para poner IA dentro de una central de monitoreo sin entregarle la decisión a la máquina: el ciclo MEDIR, el nivel de control, plantillas de una página y skills para agentes.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harness MEDIR para seguridad electrónica">
+<meta property="og:title" content="Harness MEDIR para seguridad electrónica">
+<meta property="og:description" content="Guía práctica y abierta para poner IA dentro de una central de monitoreo sin entregarle la decisión a la máquina: el ciclo MEDIR, el nivel de control, plantillas de una página y skills para agentes.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/">
+<meta property="og:locale" content="es_LA">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harness MEDIR para seguridad electrónica: la alerta es una hipótesis, el operador confirma.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harness MEDIR para seguridad electrónica">
+<meta name="twitter:description" content="Guía práctica y abierta para poner IA dentro de una central de monitoreo sin entregarle la decisión a la máquina: el ciclo MEDIR, el nivel de control, plantillas de una página y skills para agentes.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Saltar al contenido</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>seguridad</span></a>
+<nav class="lang" aria-label="Idioma"><a href="../index.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="../en/index.html" hreflang="en" lang="en">EN</a><a href="index.html" hreflang="es" lang="es" aria-current="true">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Navegación principal"><a href="index.html" aria-current="page">Inicio</a><a href="index.html#medir">Ciclo MEDIR</a><a href="modelos.html">Plantillas</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<main id="conteudo" class="page">
+<p class="eyebrow">Harness MEDIR · seguridad electrónica · v0.2</p>
+<h1>Son las 2:47. Llegó la alerta. ¿Quién decide?</h1>
+<p class="deck">Una guía práctica y abierta para poner IA dentro de una central de monitoreo sin entregarle la decisión a la máquina. El modelo señala. El protocolo decide. El operador confirma.</p>
+<p class="byline">Teco Sodré, WeSAFER y AVANTIA · con la comunidad del Taller Práctico de IA en Seguridad · octubre de 2026</p>
+
+<div class="console" role="figure" aria-label="Ejemplo de alerta ficticia">
+<span class="t">ALERTA 02:47</span> · cámara 14 · industria<br>
+Intrusión perimetral · confianza del modelo 71%<br>
+<span class="dim">Llovizna · 1 operador en el turno · 38 alertas en la última hora</span><br>
+<span class="tag">hipótesis, no prueba</span>
+</div>
+
+<h2 id="cena">La escena</h2>
+<p>Madrugada en la central. Un operador solo, el café ya frío, un mosaico de cámaras y una fila de alertas que no se vacía. A las 2:47 llega otra, la número 39 de la última hora. La analítica marca 71% de confianza. Llovizna, y la semana pasada la lluvia ya disparó falsas alarmas en esta misma cámara.</p>
+<p>Ahora siente a un asistente de IA en la silla de al lado. Puede ayudar mucho: decir qué cambió en la escena, recordar el protocolo, sugerir qué mirar primero. O puede empeorarlo todo: responder con un texto largo y demasiado seguro, recomendar llamar a la policía por una sombra, o hacer que una cámara caída parezca una noche tranquila.</p>
+<p>La diferencia entre uno y otro no está en el modelo. Está en lo que lo rodea.</p>
+
+<h2 id="harness">Agente = modelo + harness</h2>
+<p>El modelo es lo que ve y escribe. El <strong>harness</strong> es todo lo demás: el contexto que recibe, las reglas que sigue, quién decide en cada etapa, qué se mide y qué cambia después de un error. Todos tienen acceso a los mismos modelos. El harness es suyo, y es la parte que nadie vende lista.</p>
+<p>Tres reglas resumen el resto del sitio:</p>
+<ol class="rules">
+<li><strong>Toda alerta es una hipótesis, nunca una prueba.</strong> El algoritmo señala, el protocolo decide.</li>
+<li><strong>El operador confirma.</strong> Lo que es difícil de deshacer pasa por una persona, siempre, y confirmar significa mirar el video, no hacer clic en "aceptar".</li>
+<li><strong>Sin verificación no hay autonomía responsable.</strong> Si nadie puede comprobar la alerta, no se delega nada.</li>
+</ol>
+
+<h2 id="medir">El ciclo MEDIR</h2>
+<p>Cinco pasos: Mapear, Equipar, Delegar, Inspeccionar, Reforzar. Las iniciales forman el verbo que da nombre al método, a propósito: el harness existe para medir cómo se comporta la IA en su operación y para cambiar el entorno cuando se equivoca.</p>
+<ul class="cards">
+<li><a class="card" href="mapear.html"><span class="k">M · paso 1</span><span class="h">Mapear</span><span class="d">¿Qué tarea, con qué riesgo? Una cámara, un evento, una decisión. De aquí sale el nivel de control.</span></a></li>
+<li><a class="card" href="equipar.html"><span class="k">E · paso 2</span><span class="h">Equipar</span><span class="d">¿Qué necesita saber y poder hacer el modelo? Rol, protocolo, respuesta corta, herramientas mínimas.</span></a></li>
+<li><a class="card" href="delegar.html"><span class="k">D · paso 3</span><span class="h">Delegar</span><span class="d">¿Cuánto puede hacer solo? Autonomía declarada por caso de uso, nunca por proveedor.</span></a></li>
+<li><a class="card" href="inspecionar.html"><span class="k">I · paso 4</span><span class="h">Inspeccionar</span><span class="d">¿Cómo sabemos que funciona? Sensores que producen evidencia, no opinión.</span></a></li>
+<li><a class="card" href="reforcar.html"><span class="k">R · paso 5</span><span class="h">Reforzar</span><span class="d">¿Qué cambia después de un error? Cada error se vuelve un cambio permanente, con fecha y versión.</span></a></li>
+</ul>
+<div class="callout"><span class="lbl">Regla de dimensionamiento</span><p>El harness tiene que ser más chico que la superficie de falla que controla. Un proceso de aprobación que da más trabajo que el propio riesgo no sobrevive al primer turno de noche.</p></div>
+
+<h2 id="nivel">Nivel de control</h2>
+<p>El <strong>nivel de control</strong> dice cuánto puede hacer sola la IA en un caso de uso. Lo define el costo del error, no la confianza en el proveedor ni la tasa de acierto del folleto.</p>
+<div class="callout"><span class="lbl">Léalo así</span><p><strong>Un N más alto significa más control humano, no más libertad para la máquina.</strong> En N3 la IA sigue solo señalando. Lo que crece es la cantidad de personas y de registros entre la alerta y la acción.</p></div>
+<ul class="scale" aria-label="Escala del nivel de control">
+<li class="s1"><b>N1</b>la IA actúa sola, siempre con registro</li>
+<li class="s2"><b>N2</b>la IA recomienda, el operador confirma</li>
+<li class="s3"><b>N3</b>el operador confirma en el video y otra persona autoriza</li>
+</ul>
+<p class="scale-axis"><span>menos control humano</span><span>más control humano</span></p>
+<p>Aplíquela en orden, de arriba hacia abajo. <strong>La primera fila verdadera define el nivel</strong>, y las filas de abajo no lo reducen.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Si...</th><th scope="col">Nivel</th><th scope="col">Quién decide</th></tr></thead>
+<tbody>
+<tr><td>cuando se dispara la alerta, alguien actúa en el mundo real de una forma difícil de deshacer (abordar a una persona, llamar a la policía, bloquear un acceso, detener la operación)</td><td><span class="lvl n3">N3</span></td><td>La IA señala. El operador confirma en el video y otra persona autoriza la acción.</td></tr>
+<tr><td>el sistema lee o escribe en un sistema de otra empresa o del cliente, o el evento ocurre más de 100 veces al mes, o la acción tiene efecto fuera de la central</td><td><span class="lvl n2">N2</span></td><td>La IA señala y recomienda. El operador confirma antes de actuar.</td></tr>
+<tr><td>la acción es interna, fácil de deshacer y sin integración con terceros</td><td><span class="lvl">N1</span></td><td>La IA puede actuar sola (marcar el video, abrir un ticket), siempre con registro.</td></tr>
+</tbody></table></div>
+<div class="lockbox"><span class="lbl">Bloqueo</span><p>Si no hay forma de comprobar si la alerta era correcta (un segundo sensor, video grabado, una verificación en sitio), el caso queda en <strong>Bloqueo</strong>. El Bloqueo pasa por encima de cualquier fila de la tabla: no se delega nada, ni la acción más inocente, hasta que exista la verificación. Cuando exista, el caso vuelve al nivel que definió la tabla.</p></div>
+<p>Registre siempre el nivel y <strong>la fila que lo definió</strong>: quien revise el caso después necesita saber si vino de la acción, de la integración o del volumen. La tabla completa, las cuatro preguntas y la matriz de acciones están en <a href="modelos.html#nivel">Plantillas</a>.</p>
+
+<h2 id="comece">Empiece en 15 minutos</h2>
+<p>Elija una cámara real de su operación. No hace falta instalar nada.</p>
+<ol>
+<li><strong>Minutos 0 a 3, Mapear.</strong> Escriba una frase: cámara, evento, decisión. Responda las <a href="modelos.html#perguntas">cuatro preguntas</a> y anote el nivel y la fila que lo definió.</li>
+<li><strong>Minutos 3 a 6, contrato.</strong> Complete el <a href="modelos.html#contrato">contrato de tarea</a>. Lo que no sepa responder es su lista de pendientes.</li>
+<li><strong>Minutos 6 a 11, Equipar.</strong> Pruebe lado a lado el <a href="modelos.html#prompt">prompt A y el prompt B</a> con una alerta ficticia. ¿Qué respuesta le entregaría a su operador a las 3 de la mañana?</li>
+<li><strong>Minutos 11 a 14, antes de encender.</strong> Recorra el <a href="modelos.html#checklist">checklist de diez puntos</a>. Cada "no" se vuelve un pendiente con responsable.</li>
+<li><strong>Minuto 15, Inspeccionar.</strong> Elija dos <a href="modelos.html#sensores">sensores</a> para empezar a medir mañana. Falsos positivos por cada mil alertas y alertas por operador por hora son un buen par para empezar.</li>
+</ol>
+
+<h2 id="kit">Qué hay aquí</h2>
+<ul class="cards">
+<li><a class="card" href="modelos.html"><span class="k">Plantillas</span><span class="h">Cinco páginas para copiar</span><span class="d">Contrato de tarea, nivel de control, prompt con harness, checklist antes de encender y sensores.</span></a></li>
+<li><a class="card" href="skills.html"><span class="k">Skills</span><span class="h">Siete skills para agentes</span><span class="d">Mapear una cámara, triaje de alertas, revisión de nivel, integraciones de solo lectura y el diseño de un servidor MCP.</span></a></li>
+<li><a class="card" href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/casos"><span class="k">Casos</span><span class="h">Cuatro casos por sector</span><span class="d">Industria, terminal de graneles, sitios remotos de energía y grandes eventos, siempre anonimizados (en portugués).</span></a></li>
+<li><a class="card" href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/CONTRIBUTING.md"><span class="k">Comunidad</span><span class="h">Cómo contribuir</span><span class="d">Un caso, un error que se volvió regla, un sensor o una skill, por issue o pull request.</span></a></li>
+</ul>
+
+<h2 id="comunidade">Hecho en comunidad</h2>
+<p>Este proyecto nació en el Taller Práctico de IA en Seguridad, presentado por Teco Sodré en SegSummit 2026, y crece con lo que pasa en las operaciones de quienes participan. Toda contribución se anonimiza: ningún nombre de cliente, ciudad, organismo público, proveedor, precio o persona entra al repositorio. Los ejemplos son siempre de sector: industria, terminales de graneles, sitios remotos de energía, grandes eventos, comercio minorista, condominios.</p>
+<p>El método viene de <a href="https://tecosodreaboutdigital.github.io/harness-medir/">harness-medir</a>, la serie de Teco Sodré sobre ingeniería de harness. Aquí se adaptó al CCTV, al monitoreo y a la seguridad electrónica, con una regla más, el Bloqueo, porque en seguridad el costo de una alerta que nadie puede comprobar recae en una persona abordada, un acceso bloqueado o una operación detenida.</p>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER y AVANTIA. Contenido bajo <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>: úselo y adáptelo citando la fuente.</p>
+<p>Derivado de <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a>, de Teco Sodré. El código y el historial están en <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">el repositorio</a>, donde la comunidad contribuye por issue o pull request.</p>
+</div></footer>
+</body>
+</html>

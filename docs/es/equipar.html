@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equipar · Harness MEDIR para seguridad electrónica</title>
+<meta name="description" content="Paso 2 del ciclo MEDIR: darle al modelo el rol, el protocolo, el nivel de control, una respuesta corta y las herramientas mínimas, y nada más.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/equipar.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/equipar.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/equipar.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/equipar.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/equipar.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harness MEDIR para seguridad electrónica">
+<meta property="og:title" content="Equipar · Harness MEDIR para seguridad electrónica">
+<meta property="og:description" content="Paso 2 del ciclo MEDIR: darle al modelo el rol, el protocolo, el nivel de control, una respuesta corta y las herramientas mínimas, y nada más.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/equipar.html">
+<meta property="og:locale" content="es_LA">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harness MEDIR para seguridad electrónica: la alerta es una hipótesis, el operador confirma.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Equipar · Harness MEDIR para seguridad electrónica">
+<meta name="twitter:description" content="Paso 2 del ciclo MEDIR: darle al modelo el rol, el protocolo, el nivel de control, una respuesta corta y las herramientas mínimas, y nada más.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Saltar al contenido</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>seguridad</span></a>
+<nav class="lang" aria-label="Idioma"><a href="../equipar.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="../en/equipar.html" hreflang="en" lang="en">EN</a><a href="equipar.html" hreflang="es" lang="es" aria-current="true">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="index.html#medir">Ciclo MEDIR</a><a href="modelos.html">Plantillas</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<ol class="steps" aria-label="Los cinco pasos del ciclo MEDIR">
+<li><a href="mapear.html"><b>M</b><span class="nm">Mapear</span></a></li>
+<li><span aria-current="step"><b>E</b><span class="nm">Equipar</span></span></li>
+<li><a href="delegar.html"><b>D</b><span class="nm">Delegar</span></a></li>
+<li><a href="inspecionar.html"><b>I</b><span class="nm">Inspeccionar</span></a></li>
+<li><a href="reforcar.html"><b>R</b><span class="nm">Reforzar</span></a></li>
+</ol>
+<main id="conteudo" class="page">
+<p class="eyebrow">Paso 2 de 5 · E</p>
+<h1>Equipar</h1>
+<p class="deck">¿Qué necesita saber y poder hacer el modelo? Lo mínimo para ayudar a un operador cansado a decidir, y nada más.</p>
+
+<h2 id="proposito">Para qué sirve</h2>
+<p>Equipar es escribir el harness: rol, protocolo, nivel de control, formato de la respuesta y lo que el modelo no sabe. El modelo ayuda al operador a decidir. No decide.</p>
+<p>La regla de dimensionamiento pesa aquí más que en cualquier otro paso: <strong>el harness tiene que ser más chico que la superficie de falla que controla.</strong> Cada herramienta de más es una forma más de fallar, y a las 3 de la mañana nadie tiene tiempo de descubrir cuál.</p>
+
+<h2 id="perguntas">Preguntas</h2>
+<ol>
+<li>¿Cuál es el rol del modelo en esta central? (ayudar al operador a decidir, nunca decidir)</li>
+<li>¿Qué parte del protocolo de la central se aplica a este evento?</li>
+<li>¿Cuál es el nivel de control y quién decide en cada etapa?</li>
+<li>¿En qué formato necesita la respuesta el operador, sabiendo que está cansado, solo y con otras alertas en la fila?</li>
+<li>¿Qué herramientas necesita de verdad el modelo? ¿Consultar el video grabado? ¿Abrir un ticket? ¿Alguna otra?</li>
+<li>¿Qué no sabe el modelo y tiene que decir que no sabe? (estado de la cámara, quién está de turno, si el área estaba liberada)</li>
+<li>¿Dónde quedan las decisiones cuando termina la conversación?</li>
+</ol>
+
+<h2 id="saidas">Qué sale de aquí</h2>
+<ul>
+<li>El prompt con harness de esta tarea, versionado (vea <a href="modelos.html#prompt">prompt con harness</a>).</li>
+<li>La lista cerrada de herramientas, cada una con lo que hace y cómo falla.</li>
+<li>El formato de la respuesta, con límite de extensión.</li>
+<li>Dónde queda registrada cada alerta, decisión y acción (vea el <a href="modelos.html#registro">registro mínimo</a>).</li>
+</ul>
+
+<h2 id="exemplos">En CCTV</h2>
+<ul>
+<li><strong>Respuesta corta y fija.</strong> Hipótesis más probable y dos alternativas, con un falso positivo entre ellas; qué verificar en los próximos 60 segundos; quién decide y cuándo escalar; qué registrar; qué no sabe. Como máximo 120 palabras.</li>
+<li><strong>Herramienta mínima en sitios remotos de energía.</strong> El modelo puede consultar los últimos minutos de video grabado y abrir un ticket vinculado a la alerta. No puede liberar la llave digital del gabinete.</li>
+<li><strong>Herramienta mínima en un condominio.</strong> El modelo puede subir la cámara al mosaico y sugerir el texto del aviso a la portería. Quien habla con la portería es el operador.</li>
+<li><strong>Contexto del turno.</strong> Decirle al modelo cuántas alertas recibió el operador en la última hora cambia la respuesta: con 38 alertas en la fila, la recomendación tiene que ser más corta y más selectiva.</li>
+</ul>
+<div class="callout"><span class="lbl">Integraciones</span><p>Conectar el modelo al sistema de grabación, al control de acceso o al monitoreo de infraestructura empieza siempre en solo lectura. Las skills <a href="skills.html#integracao-vms">integracao-vms</a>, <a href="skills.html#integracao-controle-de-acesso">integracao-controle-de-acesso</a> y <a href="skills.html#saude-da-operacao">saude-da-operacao</a> muestran el patrón.</p></div>
+
+<h2 id="antipadroes">Antipatrones</h2>
+<ul>
+<li><strong>Prompt sin rol.</strong> "¿Qué hago?" devuelve una respuesta genérica, larga y demasiado segura. Compárelo en el ejercicio A contra B.</li>
+<li><strong>Demasiadas herramientas.</strong> Darle al modelo acceso al control de acceso, a listas de alerta y a registros de personas "porque puede servir" amplía la superficie de falla y sube el nivel de control.</li>
+<li><strong>Harness que solo existe en la cabeza de alguien.</strong> Una regla que no está escrita en el prompt, en el protocolo o en la configuración no es una regla.</li>
+<li><strong>Olvidar lo que el modelo no sabe.</strong> Un modelo que nunca dice "no sé" inventa con la misma seguridad con que acierta.</li>
+<li><strong>Datos reales en un asistente público.</strong> Para probar prompts, use alertas ficticias. Rostros, placas y nombres de personas reales no van a asistentes de uso general; el tratamiento de datos personales sigue la ley de protección de datos aplicable y la política de su empresa.</li>
+</ul>
+<nav class="pager" aria-label="Los cinco pasos del ciclo MEDIR"><a class="prev" href="mapear.html"><small>Paso anterior</small>Mapear</a><a class="next" href="delegar.html"><small>Paso siguiente</small>Delegar</a></nav>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER y AVANTIA. Contenido bajo <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>: úselo y adáptelo citando la fuente.</p>
+<p>Derivado de <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a>, de Teco Sodré. El código y el historial están en <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">el repositorio</a>, donde la comunidad contribuye por issue o pull request.</p>
+</div></footer>
+</body>
+</html>

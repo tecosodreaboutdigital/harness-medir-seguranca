@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The MEDIR harness for security operations</title>
+<meta name="description" content="A practical, open guide to putting AI inside a monitoring center without handing the decision to the machine: the MEDIR cycle, control levels, one-page templates and agent skills.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="The MEDIR harness for security operations">
+<meta property="og:description" content="A practical, open guide to putting AI inside a monitoring center without handing the decision to the machine: the MEDIR cycle, control levels, one-page templates and agent skills.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The MEDIR harness for security operations">
+<meta name="twitter:description" content="A practical, open guide to putting AI inside a monitoring center without handing the decision to the machine: the MEDIR cycle, control levels, one-page templates and agent skills.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../index.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="index.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/index.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<main id="conteudo" class="page">
+<p class="eyebrow">MEDIR harness · security operations · v0.2</p>
+<h1>2:47 a.m. An alert just came in. Who decides?</h1>
+<p class="deck">A practical, open guide to putting AI inside a monitoring center without handing the decision to the machine. The model flags. The protocol decides. The operator confirms.</p>
+<p class="byline">Teco Sodré, WeSAFER and AVANTIA · with the community of the Practical AI in Security workshop · October 2026</p>
+
+<div class="console" role="figure" aria-label="Example of a fictitious alert">
+<span class="t">ALERT 02:47</span> · camera 14 · industrial site<br>
+Perimeter intrusion · model confidence 71%<br>
+<span class="dim">Light rain · 1 operator on shift · 38 alerts in the last hour</span><br>
+<span class="tag">hypothesis, not proof</span>
+</div>
+
+<h2 id="cena">The scene</h2>
+<p>Night shift in the control room. One operator, a cold coffee, a wall of camera feeds and an alert queue that never empties. At 2:47 another one lands, the 39th in the past hour. The analytics engine says 71% confidence. It is drizzling, and last week the rain set off false alarms on this very camera.</p>
+<p>Now put an AI assistant in the chair next to that operator. It could help a lot: point out what changed in the scene, recall the protocol, suggest where to look first. Or it could make things worse: reply with a long, overconfident paragraph, recommend calling the police over a shadow, or let a dead camera pass for a quiet night.</p>
+<p>The difference between the two is not the model. It is everything around it.</p>
+
+<h2 id="harness">Agent = model + harness</h2>
+<p>The model is what sees and writes. The <strong>harness</strong> is everything else: the context it receives, the rules it follows, who decides at each step, what gets measured and what changes after a mistake. Everyone has access to the same models. The harness is yours, and nobody sells it off the shelf.</p>
+<p>Three rules sum up the rest of this site:</p>
+<ol class="rules">
+<li><strong>Every alert is a hypothesis, never proof.</strong> The algorithm flags, the protocol decides.</li>
+<li><strong>The operator confirms.</strong> Anything hard to undo goes through a person, always, and confirming means watching the video, not clicking "OK".</li>
+<li><strong>No verification, no responsible autonomy.</strong> If nobody can check the alert, nothing gets delegated.</li>
+</ol>
+
+<h2 id="medir">The MEDIR cycle</h2>
+<p>Five steps: Map, Equip, Delegate, Inspect, Reinforce. In Portuguese the initials (Mapear, Equipar, Delegar, Inspecionar, Reforçar) spell <em>medir</em>, "to measure", and that is the point: the harness exists to measure how AI behaves in your operation and to change the environment when it gets things wrong.</p>
+<ul class="cards">
+<li><a class="card" href="mapear.html"><span class="k">M · step 1</span><span class="h">Map</span><span class="d">Which task, at what risk? One camera, one event, one decision. The control level comes out of here.</span></a></li>
+<li><a class="card" href="equipar.html"><span class="k">E · step 2</span><span class="h">Equip</span><span class="d">What does the model need to know and be able to do? Role, protocol, a short answer, minimal tools.</span></a></li>
+<li><a class="card" href="delegar.html"><span class="k">D · step 3</span><span class="h">Delegate</span><span class="d">How much can it do alone? Autonomy declared per use case, never per vendor.</span></a></li>
+<li><a class="card" href="inspecionar.html"><span class="k">I · step 4</span><span class="h">Inspect</span><span class="d">How do we know it works? Sensors that produce evidence, not opinions.</span></a></li>
+<li><a class="card" href="reforcar.html"><span class="k">R · step 5</span><span class="h">Reinforce</span><span class="d">What changes after a mistake? Every error becomes a permanent change, with a date and a version.</span></a></li>
+</ul>
+<div class="callout"><span class="lbl">Sizing rule</span><p>The harness must be smaller than the failure surface it controls. An approval process that costs more effort than the risk itself will not survive the first night shift.</p></div>
+
+<h2 id="nivel">Control level</h2>
+<p>The <strong>control level</strong> says how much the AI may do on its own in a given use case. It is set by the cost of being wrong, not by trust in the vendor or by the accuracy figure in the brochure.</p>
+<div class="callout"><span class="lbl">Read it this way</span><p><strong>A higher N means more human control, not more freedom for the machine.</strong> At N3 the AI still only flags. What grows is the number of people and records between the alert and the action.</p></div>
+<ul class="scale" aria-label="Control level scale">
+<li class="s1"><b>N1</b>the AI acts alone, always logged</li>
+<li class="s2"><b>N2</b>the AI recommends, the operator confirms</li>
+<li class="s3"><b>N3</b>the operator confirms on video and someone else authorizes</li>
+</ul>
+<p class="scale-axis"><span>less human control</span><span>more human control</span></p>
+<p>Apply it in order, top to bottom. <strong>The first true row sets the level</strong>, and the rows below cannot lower it.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">If...</th><th scope="col">Level</th><th scope="col">Who decides</th></tr></thead>
+<tbody>
+<tr><td>when the alert fires, someone acts in the real world in a way that is hard to undo (approach a person, call the police, block access, stop operations)</td><td><span class="lvl n3">N3</span></td><td>The AI flags. The operator confirms on video and another person authorizes the action.</td></tr>
+<tr><td>the system reads from or writes to another company's or the client's system, or the event happens more than 100 times a month, or the action has effects outside the control room</td><td><span class="lvl n2">N2</span></td><td>The AI flags and recommends. The operator confirms before acting.</td></tr>
+<tr><td>the action is internal, easy to undo and involves no third-party integration</td><td><span class="lvl">N1</span></td><td>The AI may act alone (tag the footage, open a ticket), always logged.</td></tr>
+</tbody></table></div>
+<div class="lockbox"><span class="lbl">Lock</span><p>If there is no way to check whether the alert was right (a second sensor, recorded video, a check on site), the case is under <strong>Lock</strong>. The Lock overrides every row of the table: nothing is delegated, not even the most harmless action, until a verification exists. Once it does, the case returns to the level the table set.</p></div>
+<p>Always record the level and <strong>the row that set it</strong>: whoever reviews the case later needs to know whether it came from the action, the integration or the volume. The full table, the four questions and the action matrix are in <a href="modelos.html#nivel">Templates</a>.</p>
+
+<h2 id="comece">Start in 15 minutes</h2>
+<p>Pick one real camera in your operation. Nothing to install.</p>
+<ol>
+<li><strong>Minutes 0 to 3, Map.</strong> Write one sentence: camera, event, decision. Answer the <a href="modelos.html#perguntas">four questions</a> and note the level and the row that set it.</li>
+<li><strong>Minutes 3 to 6, contract.</strong> Fill in the <a href="modelos.html#contrato">task contract</a>. Whatever you cannot answer is your list of open items.</li>
+<li><strong>Minutes 6 to 11, Equip.</strong> Run <a href="modelos.html#prompt">prompt A and prompt B</a> side by side on a fictitious alert. Which answer would you hand your operator at 3 a.m.?</li>
+<li><strong>Minutes 11 to 14, before go-live.</strong> Go through the <a href="modelos.html#checklist">ten-item checklist</a>. Every "no" becomes an open item with an owner.</li>
+<li><strong>Minute 15, Inspect.</strong> Pick two <a href="modelos.html#sensores">sensors</a> to start measuring tomorrow. False positives per thousand alerts and alerts per operator per hour make a good first pair.</li>
+</ol>
+
+<h2 id="kit">What is here</h2>
+<ul class="cards">
+<li><a class="card" href="modelos.html"><span class="k">Templates</span><span class="h">Five pages to copy</span><span class="d">Task contract, control level, prompt with harness, pre-launch checklist and sensors.</span></a></li>
+<li><a class="card" href="skills.html"><span class="k">Skills</span><span class="h">Seven agent skills</span><span class="d">Map a camera, triage an alert, review control levels, read-only integrations and an MCP server design.</span></a></li>
+<li><a class="card" href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/tree/main/casos"><span class="k">Cases</span><span class="h">Four sector cases</span><span class="d">Industrial site, bulk terminal, remote energy sites and large events, always anonymized (in Portuguese).</span></a></li>
+<li><a class="card" href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca/blob/main/CONTRIBUTING.md"><span class="k">Community</span><span class="h">How to contribute</span><span class="d">A case, a mistake that became a rule, a sensor or a skill, through an issue or a pull request.</span></a></li>
+</ul>
+
+<h2 id="comunidade">Built by a community</h2>
+<p>This project started at the Practical AI in Security workshop, presented by Teco Sodré at SegSummit 2026, and grows with what happens in the operations of the people who take part. Every contribution is anonymized: no client, city, public body, vendor, price or person goes into the repository. Examples always stay at sector level: industrial sites, bulk terminals, remote energy sites, large events, retail, residential buildings.</p>
+<p>The method comes from <a href="https://tecosodreaboutdigital.github.io/harness-medir/">harness-medir</a>, Teco Sodré's series on harness engineering. Here it is adapted to CCTV, monitoring and electronic security, with one extra rule, the Lock, because in security the cost of an alert nobody can check falls on a person who gets stopped, an entrance that gets blocked or an operation that grinds to a halt.</p>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>

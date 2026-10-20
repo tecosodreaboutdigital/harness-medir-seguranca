@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delegate · The MEDIR harness for security operations</title>
+<meta name="description" content="Step 3 of the MEDIR cycle: declare per use case what the AI does alone, what it only recommends and what requires human confirmation. A higher N means more human control.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teco Sodré">
+<meta name="theme-color" content="#0b1a2c">
+<link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/delegar.html">
+<link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/delegar.html">
+<link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/delegar.html">
+<link rel="alternate" hreflang="es" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/delegar.html">
+<link rel="alternate" hreflang="x-default" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/delegar.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The MEDIR harness for security operations">
+<meta property="og:title" content="Delegate · The MEDIR harness for security operations">
+<meta property="og:description" content="Step 3 of the MEDIR cycle: declare per use case what the AI does alone, what it only recommends and what requires human confirmation. A higher N means more human control.">
+<meta property="og:url" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/delegar.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Delegate · The MEDIR harness for security operations">
+<meta name="twitter:description" content="Step 3 of the MEDIR cycle: declare per use case what the AI does alone, what it only recommends and what requires human confirmation. A higher N means more human control.">
+<meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<nav class="lang" aria-label="Language"><a href="../delegar.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="delegar.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/delegar.html" hreflang="es" lang="es">ES</a></nav>
+</div>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
+</header>
+<ol class="steps" aria-label="The five steps of the MEDIR cycle">
+<li><a href="mapear.html"><b>M</b><span class="nm">Map</span></a></li>
+<li><a href="equipar.html"><b>E</b><span class="nm">Equip</span></a></li>
+<li><span aria-current="step"><b>D</b><span class="nm">Delegate</span></span></li>
+<li><a href="inspecionar.html"><b>I</b><span class="nm">Inspect</span></a></li>
+<li><a href="reforcar.html"><b>R</b><span class="nm">Reinforce</span></a></li>
+</ol>
+<main id="conteudo" class="page">
+<p class="eyebrow">Step 3 of 5 · D</p>
+<h1>Delegate</h1>
+<p class="deck">How much can it do alone? Autonomy is set by the cost of being wrong, never by trust in the vendor or by the advertised accuracy.</p>
+
+<h2 id="proposito">What it is for</h2>
+<p>Declaring, for each use case, what the AI may do with nobody involved, what it only recommends, and what requires human confirmation and authorization.</p>
+<div class="callout"><span class="lbl">Read it this way</span><p><strong>A higher N means more human control, not more freedom for the machine.</strong> At N3 the AI still only flags; what grows is the number of people and records between the alert and the action.</p></div>
+<div class="lockbox"><span class="lbl">Lock</span><p>If nobody can check the alert, there is nothing to delegate. The Lock overrides any level until a verification exists.</p></div>
+<p>The full table is under <a href="modelos.html#nivel">control level</a>.</p>
+
+<h2 id="perguntas">Questions</h2>
+<ol>
+<li>Which row of the control level table defines this case? Is it on record?</li>
+<li>Which actions may the AI carry out alone? Are they all internal, easy to undo and logged?</li>
+<li>Who confirms on video, who authorizes the action, and how fast does each need to respond?</li>
+<li>What happens if nobody responds in time? (the right answer is almost never "the AI acts alone")</li>
+<li>Does the interface let the operator disagree with the AI, and is the disagreement logged?</li>
+<li>Is there a way to check the alert? If not, the case is under Lock.</li>
+</ol>
+
+<h2 id="saidas">What comes out</h2>
+<ul>
+<li>The control level declared in the <a href="modelos.html#contrato">task contract</a>, with the row that set it.</li>
+<li>The list of actions by level: what is automatic, what is a recommendation, what requires authorization.</li>
+<li>The roles that confirm and authorize, with deadlines and an escalation path.</li>
+</ul>
+
+<h2 id="exemplos">In CCTV</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Case</th><th scope="col">Level</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Person in a restricted area of an industrial site: tag the footage and bring the camera up on the wall</td><td><span class="lvl">N1</span></td><td>Internal, easy to undo, no third-party integration.</td></tr>
+<tr><td>Failed or blocked camera in a residential building, with a maintenance ticket</td><td><span class="lvl">N1</span></td><td>Internal and reversible. The ticket records the failure as a failure.</td></tr>
+<tr><td>Queue longer than agreed at a large event, with a recommendation on where to reinforce</td><td><span class="lvl n2">N2</span></td><td>Effects outside the control room. The command post accepts or rejects, and the log keeps the reason.</td></tr>
+<tr><td>Vehicle with a suspicious plate at a bulk terminal gate</td><td><span class="lvl n2">N2</span> or <span class="lvl n3">N3</span></td><td>N2 if the alert only creates an incident; N3 if it leads to blocking entry or stopping the driver.</td></tr>
+<tr><td>Smoke outside the fence of a remote energy site, with team dispatch</td><td><span class="lvl n3">N3</span></td><td>Dispatching a team has real cost and risk. The operator confirms on video first.</td></tr>
+<tr><td>Watch-list match from face recognition</td><td><span class="lvl n3">N3</span></td><td>Approaching someone is hard to undo. The AI flags; the operator confirms and another person authorizes.</td></tr>
+</tbody></table></div>
+<p>A cloned plate and a human face cannot share the level of a blocked camera: the same control room can run one case at N1 and another at N3 side by side.</p>
+
+<h2 id="antipadroes">Anti-patterns</h2>
+<ul>
+<li><strong>Autonomy by vendor.</strong> "The system ships with automatic actions" decides nothing. The task contract does.</li>
+<li><strong>A deadline that turns into authorization.</strong> "If the operator does not answer in 2 minutes, the AI acts" turns the absence of a decision into a decision.</li>
+<li><strong>Confirming without looking.</strong> Human confirmation means watching the video, not clicking "OK" on a pop-up. Approval requests that come too often turn into reflex clicks.</li>
+<li><strong>Lowering control to save time.</strong> Starting at N1 a task that belongs at N3 "to speed up the pilot" is exactly the risk the level exists to prevent.</li>
+<li><strong>Delegating under Lock.</strong> If nobody can check the alert, build the verification first.</li>
+</ul>
+<p>To audit an operation that is already running, use the <a href="skills.html#revisar-nivel-de-controle">revisar-nivel-de-controle</a> skill.</p>
+<nav class="pager" aria-label="The five steps of the MEDIR cycle"><a class="prev" href="equipar.html"><small>Previous step</small>Equip</a><a class="next" href="inspecionar.html"><small>Next step</small>Inspect</a></nav>
+</main>
+<footer class="site-footer"><div class="in">
+<p>© 2026 Teco Sodré, WeSAFER and AVANTIA. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use and adapt it, with attribution.</p>
+<p>Derived from <a href="https://github.com/tecosodreaboutdigital/harness-medir">harness-medir</a> by Teco Sodré. Source and history live in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>, where the community contributes through issues and pull requests.</p>
+</div></footer>
+</body>
+</html>
