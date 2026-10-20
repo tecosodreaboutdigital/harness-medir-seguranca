@@ -1,10 +1,12 @@
 # Harness MEDIR para segurança eletrônica
 
+*Leia em [English](README.en.md) · [Español](README.es.md). Site: [tecosodreaboutdigital.github.io/harness-medir-seguranca](https://tecosodreaboutdigital.github.io/harness-medir-seguranca/), em português, inglês e espanhol.*
+
 O ciclo MEDIR aplicado ao CFTV e ao monitoramento: modelos de uma página, regras de nível de controle e casos anonimizados para quem vai colocar IA dentro de uma central de segurança sem entregar a decisão à máquina.
 
 Este repositório nasceu na Oficina Prática de IA na Segurança, apresentada por Teco Sodré na SegSummit em 21 de outubro de 2026, e é construído em conjunto pela comunidade de participantes da oficina.
 
-Estado: v0.1, versão inicial. Veja o [CHANGELOG](CHANGELOG.md).
+Estado: v0.2, primeira expansão: site em três idiomas e sete skills para agentes. Veja o [CHANGELOG](CHANGELOG.md).
 
 ---
 
@@ -31,8 +33,8 @@ O que é diferente aqui:
 | Aspecto | harness-medir | Este repositório |
 |---|---|---|
 | Domínio | Agentes de IA em geral | CFTV, monitoramento e segurança eletrônica |
-| Formato | Série de artigos em HTML, guia compacto e playbook | Só Markdown: passos, modelos e casos para usar no dia seguinte |
-| Idiomas | Português, inglês e espanhol | Português do Brasil |
+| Formato | Série de artigos em HTML, guia compacto e playbook | Site curto em HTML, modelos e casos em Markdown e skills para agentes, para usar no dia seguinte |
+| Idiomas | Português, inglês e espanhol | Site e README em português, inglês e espanhol; modelos, casos e skills em português |
 | Escala de autonomia | Faixas N0 a N3 | Nível de controle N1, N2, N3 e Trava, aplicado por câmera, evento e decisão |
 | Sem verificação | Teto de faixa | **Trava**: nada é delegado até existir um jeito de conferir o alerta |
 | Quem escreve | Autor único | Comunidade, por issue ou pull request, com anonimização obrigatória |
@@ -86,6 +88,23 @@ Escolha uma câmera real da sua operação e siga os passos. Não precisa instal
 
 ## Arquivos
 
+**Site (GitHub Pages, pasta `docs/`)**
+
+- [docs/index.html](docs/index.html): página inicial em português, com [inglês](docs/en/index.html) e [espanhol](docs/es/index.html)
+- Uma página por passo do ciclo, uma de [modelos](docs/modelos.html) e uma de [skills](docs/skills.html), em cada idioma
+- HTML e CSS estáticos, sem JavaScript; a única dependência externa são as fontes IBM Plex do Google Fonts, com fonte do sistema como reserva
+
+**Skills para agentes**
+
+- [skills/README.md](skills/README.md): catálogo, instalação e regras comuns
+- [mapear-camera](skills/mapear-camera/SKILL.md): entrevista e contrato de tarefa com nível de controle
+- [triagem-de-alerta](skills/triagem-de-alerta/SKILL.md): o prompt com harness, no formato A a E
+- [revisar-nivel-de-controle](skills/revisar-nivel-de-controle/SKILL.md): auditoria de uma operação já ligada
+- [integracao-vms](skills/integracao-vms/SKILL.md): alertas do sistema de gravação por ONVIF, REST ou webhook, somente leitura, com servidor mock
+- [integracao-controle-de-acesso](skills/integracao-controle-de-acesso/SKILL.md): webhook somente leitura de controle de acesso e RH, com notas de LGPD para biometria
+- [saude-da-operacao](skills/saude-da-operacao/SKILL.md): selo de integridade do dado (íntegro, estimado, atrasado, sem dado)
+- [mcp-central](skills/mcp-central/SKILL.md): desenho de servidor MCP com três ferramentas e o harness em volta
+
 **O ciclo, passo a passo**
 
 - [medir/mapear.md](medir/mapear.md)
@@ -118,12 +137,13 @@ Escolha uma câmera real da sua operação e siga os passos. Não precisa instal
 
 ## Como contribuir
 
-Este repositório cresce com o que acontece nas operações de quem participa. Quatro tipos de contribuição são bem-vindos:
+Este repositório cresce com o que acontece nas operações de quem participa. Cinco tipos de contribuição são bem-vindos:
 
 1. **Um caso real**, anonimizado, no [modelo de caso](casos/_modelo.md).
 2. **Um erro que virou regra**: o que deu errado e qual mudança permanente entrou no ambiente.
 3. **Um sensor** que produziu evidência na sua central.
-4. **Uma pergunta ou correção** sobre qualquer arquivo.
+4. **Uma skill**, com a seção de harness obrigatória (veja [CONTRIBUTING.md](CONTRIBUTING.md#uma-skill)).
+5. **Uma pergunta, correção ou tradução** sobre qualquer arquivo.
 
 O fluxo (issue ou pull request) e as regras de anonimização estão em [CONTRIBUTING.md](CONTRIBUTING.md). Nenhum nome de cliente, cidade, órgão, fornecedor, modelo de equipamento ou preço entra no repositório.
 

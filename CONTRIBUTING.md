@@ -9,6 +9,8 @@ Este repositório é construído pela comunidade que participou da Oficina Prát
 | Um caso real, anonimizado | `casos/` | [casos/_modelo.md](casos/_modelo.md) |
 | Um erro que virou regra | `medir/reforcar.md` ou o caso correspondente | [abaixo](#erro-que-virou-regra) |
 | Um sensor que produziu evidência | `modelos/sensores.md` | [abaixo](#sensor) |
+| Uma skill para agentes | `skills/<nome>/SKILL.md` | [abaixo](#uma-skill) |
+| Uma tradução ou ajuste de idioma | `docs/en/`, `docs/es/`, `README.en.md`, `README.es.md` | [abaixo](#traduções) |
 | Uma pergunta, correção ou melhoria | O arquivo em questão | Issue ou pull request |
 
 ## Fluxo
@@ -19,7 +21,7 @@ Este repositório é construído pela comunidade que participou da Oficina Prát
 
 1. Faça um fork e crie uma branch com nome curto (ex.: `caso-varejo-doca`).
 2. Faça a alteração. Um assunto por pull request.
-3. Na descrição, diga o tipo de contribuição e confirme que passou o checklist de anonimização.
+3. Na descrição, diga o tipo de contribuição e confirme que passou o checklist de anonimização (e, se for skill de integração, a revisão de segurança).
 4. Um mantenedor revisa anonimização, clareza e coerência com a terminologia do repositório. Pode pedir ajustes.
 5. Depois de aprovada, a mudança entra no [CHANGELOG](CHANGELOG.md) na próxima versão.
 
@@ -42,9 +44,9 @@ Na dúvida, não publique: pergunte na issue antes. Uma contribuição que fere 
 
 ## Regras de escrita
 
-- Português do Brasil, formal e direto.
+- Português do Brasil, formal e direto. No site, inglês e espanhol seguem a seção [Traduções](#traduções).
 - **Nunca use travessão.** Use vírgula, dois pontos, parênteses ou ponto final. Hífen é permitido.
-- Use a terminologia do repositório: **nível de controle** (N1, N2, N3, **Trava**), **operador confirma**, **alerta é hipótese**, **harness**, **sensor**.
+- Use a terminologia do repositório: **nível de controle** (N1, N2, N3, **Trava**), **operador confirma**, **alerta é hipótese**, **harness**, **sensor**, **selo de integridade do dado**.
 - Exemplos concretos valem mais que princípios. Uma câmera, um evento, uma decisão.
 - Fato externo (lei, norma, estudo) leva a fonte, com link verificado. Não invente referência.
 
@@ -74,6 +76,65 @@ Sinal de alerta: <o padrão que indica problema>
 Armadilha: <como esse número engana>
 Onde foi usado: <setor genérico; resultado, se puder compartilhar>
 ```
+
+## Uma skill
+
+Skills ficam em `skills/<nome>/`, no formato aberto Agent Skills: uma pasta por skill, com um `SKILL.md` que começa com YAML. O nome da pasta é igual ao `name`, em letras minúsculas e hífens.
+
+```
+skills/<nome>/
+  SKILL.md          obrigatório
+  exemplos/         opcional: payloads fictícios, scripts só com biblioteca padrão
+```
+
+Estrutura mínima do `SKILL.md`:
+
+```
+---
+name: <nome-da-pasta>
+description: <o que faz e quando usar, em uma ou duas frases; termine com "EN - <resumo>">
+license: CC-BY-4.0
+metadata:
+  author: <seu nome ou apelido>
+  version: "<versão>"
+  medir: <passo do ciclo>
+---
+
+> **English summary.** <três a cinco frases>
+
+# <Título>
+
+## Quando usar
+## Harness desta skill
+- **Pode:** <o que a skill pode fazer>
+- **Nunca:** <o que ela nunca faz, inclusive sob pressão>
+- **Quem confirma:** <função que confirma ou autoriza>
+## Como fazer
+## Formato de saída
+## Regra inegociável      (uma regra, e as desculpas mais prováveis para quebrá-la)
+## Revisão de segurança   (obrigatória em skill que toca sistemas)
+## Referências
+```
+
+Regras para aceitar uma skill:
+
+1. **A seção "Harness desta skill" é obrigatória**, com as três linhas: pode, nunca, quem confirma. Skill sem essa seção é devolvida, por melhor que seja o resto.
+2. **Nenhuma ação difícil de desfazer sem confirmação humana.** A skill não executa nem recomenda executar abordar pessoa, bloquear ou liberar acesso, acionar a polícia, despachar equipe, apagar ou exportar gravação.
+3. **Somente leitura por padrão.** Escrita em sistema de terceiro só com justificativa no texto e com o nível de controle revisto.
+4. **Revisão de segurança** em toda skill que toca sistemas: autenticação, menor privilégio, somente leitura por padrão, segredos fora do repositório, log sem dado pessoal, limite de taxa e proteção contra replay em webhooks (HMAC com timestamp).
+5. **Exemplos sem nada real.** Hosts `exemplo.local`, segredos de teste lidos de variável de ambiente, nenhum IP, credencial, token, URL de sistema real, rosto, placa ou nome de pessoa. Scripts só com a biblioteca padrão da linguagem, escutando só em `localhost`.
+6. **Sem fornecedor.** Protocolos e ferramentas abertas (ONVIF, RTSP, REST, webhooks, Zabbix, MCP) são bem-vindos; nomes comerciais de sistemas de gravação, analíticos ou reconhecimento facial, não.
+7. **Teste antes.** Diga no pull request com que alerta fictício você testou a skill e o que mudou com ela em relação a não usá-la.
+
+O mantenedor lê a skill inteira antes de aceitar. Uma skill entra no catálogo de [skills/README.md](skills/README.md) e nas páginas de skills do site nos três idiomas.
+
+## Traduções
+
+O site existe em português, inglês e espanhol neutro da América Latina. Traduzir aqui é reescrever para quem opera uma central naquele idioma, não converter palavra por palavra.
+
+- Mantenha a terminologia: nível de controle / control level / nivel de control; Trava / Lock / Bloqueo; e as três regras (alerta é hipótese, o operador confirma, sem verificação não há autonomia).
+- Uma mudança de conteúdo no site entra nos três idiomas no mesmo pull request, ou abre uma issue `[tradução]` para quem puder completar.
+- As mesmas regras de anonimização e de escrita valem em qualquer idioma, inclusive a de não usar travessão.
 
 ## Licença das contribuições
 
