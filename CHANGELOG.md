@@ -2,6 +2,20 @@
 
 As versões seguem o formato `vX.Y`. Cada versão diz o que entrou, o que mudou e de onde veio a mudança.
 
+## v0.2.2 · outubro de 2026 · Tema claro por padrão e botão sol/lua
+
+Pedido de Teco Sodré para o site.
+
+Mudou:
+
+- **Tema claro por padrão** em todas as 24 páginas: fundo quase branco, cartões brancos, texto azul-marinho escuro e âmbar escurecido (#8a5a00) quando o âmbar é texto; fundos âmbar continuam #fab219 com texto escuro. O tema escuro anterior foi mantido igual.
+- **Botão sol/lua** na barra superior de toda página (38 px, com `aria-label` e `aria-pressed` em cada idioma, acessível pelo teclado e com foco visível). A escolha é manual e fica guardada no navegador (`localStorage`, chave `hms:tema`, valores `claro` e `escuro`); o site nunca segue o tema do sistema operacional. Um script mínimo no `<head>` aplica a escolha antes da pintura da página, sem piscar. Sem JavaScript, a página fica no tema claro, inteiramente legível, e o botão não aparece.
+- Contraste conferido nos dois temas: todos os pares de texto e fundo passam no nível AA da WCAG (menor razão 5,13:1 no claro e 5,30:1 no escuro).
+
+Corrigido:
+
+- Na trilha dos cinco passos, em telas largas, o nome de cada passo aparecia dentro de uma caixa extra.
+
 ## v0.2.1 · outubro de 2026 · Comunidade A.I.S., origem explícita e prévias de compartilhamento
 
 Ajustes decididos por Teco Sodré antes da publicação da v0.2.

@@ -7,7 +7,7 @@
 <meta name="description" content="Guia prático e aberto para colocar IA numa central de monitoramento sem entregar a decisão à máquina: o ciclo MEDIR, o nível de controle, modelos de uma página e skills para agentes.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Teco Sodré">
-<meta name="theme-color" content="#0b1a2c">
+<meta name="theme-color" content="#f6f8fb">
 <link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/">
 <link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/">
 <link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/">
@@ -35,6 +35,7 @@
 <meta name="twitter:description" content="Guia prático e aberto para colocar IA numa central de monitoramento sem entregar a decisão à máquina: o ciclo MEDIR, o nível de controle, modelos de uma página e skills para agentes.">
 <meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.jpg">
 <meta name="twitter:image:alt" content="Harness MEDIR para segurança eletrônica: o alerta é hipótese, o operador confirma.">
+<script>(function(){var h=document.documentElement;h.className+=' js';try{if(localStorage.getItem('hms:tema')==='escuro'){h.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
@@ -45,7 +46,10 @@
 <header class="site-header">
 <div class="bar">
 <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>segurança</span></a>
+<div class="tools">
 <nav class="lang" aria-label="Idioma"><a href="index.html" hreflang="pt-BR" lang="pt-BR" aria-current="true">PT</a><a href="en/index.html" hreflang="en" lang="en">EN</a><a href="es/index.html" hreflang="es" lang="es">ES</a></nav>
+<button type="button" class="theme-toggle" id="tema" aria-pressed="false" aria-label="Ativar tema escuro" title="Ativar tema escuro" data-escuro="Ativar tema escuro" data-claro="Ativar tema claro"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div>
 </div>
 <nav class="main-nav" aria-label="Navegação principal"><a href="index.html" aria-current="page">Início</a><a href="index.html#medir">Ciclo MEDIR</a><a href="modelos.html">Modelos</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
 </header>
@@ -143,5 +147,6 @@ Invasão de perímetro · confiança do modelo 71%<br>
 <p class="origin-foot">Derivado do harness MEDIR, de Teco Sodré: <a href="https://github.com/tecosodreaboutdigital/harness-medir">github.com/tecosodreaboutdigital/harness-medir</a> (série em <a href="https://tecosodreaboutdigital.github.io/harness-medir/">tecosodreaboutdigital.github.io/harness-medir</a>).</p>
 <p>Código e histórico no <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">repositório</a>. Conversa sobre o tema na <a href="index.html#ais">comunidade A.I.S.</a>, no WhatsApp.</p>
 </div></footer>
+<script>(function(){var b=document.getElementById('tema'),h=document.documentElement,m=document.querySelector('meta[name="theme-color"]');if(!b)return;function sync(){var d=h.getAttribute('data-theme')==='dark',l=d?b.getAttribute('data-claro'):b.getAttribute('data-escuro');b.setAttribute('aria-pressed',d?'true':'false');b.setAttribute('aria-label',l);b.title=l;if(m)m.setAttribute('content',d?'#0b1a2c':'#f6f8fb');}b.addEventListener('click',function(){var d=h.getAttribute('data-theme')!=='dark';if(d){h.setAttribute('data-theme','dark');}else{h.removeAttribute('data-theme');}try{localStorage.setItem('hms:tema',d?'escuro':'claro');}catch(e){}sync();});sync();})();</script>
 </body>
 </html>

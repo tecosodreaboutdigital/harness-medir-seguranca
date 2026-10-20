@@ -7,7 +7,7 @@
 <meta name="description" content="Paso 2 del ciclo MEDIR: darle al modelo el rol, el protocolo, el nivel de control, una respuesta corta y las herramientas mínimas, y nada más.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Teco Sodré">
-<meta name="theme-color" content="#0b1a2c">
+<meta name="theme-color" content="#f6f8fb">
 <link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/es/equipar.html">
 <link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/equipar.html">
 <link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/equipar.html">
@@ -35,6 +35,7 @@
 <meta name="twitter:description" content="Paso 2 del ciclo MEDIR: darle al modelo el rol, el protocolo, el nivel de control, una respuesta corta y las herramientas mínimas, y nada más.">
 <meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.jpg">
 <meta name="twitter:image:alt" content="Harness MEDIR para seguridad electrónica: la alerta es una hipótesis, el operador confirma.">
+<script>(function(){var h=document.documentElement;h.className+=' js';try{if(localStorage.getItem('hms:tema')==='escuro'){h.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
@@ -45,7 +46,10 @@
 <header class="site-header">
 <div class="bar">
 <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>seguridad</span></a>
+<div class="tools">
 <nav class="lang" aria-label="Idioma"><a href="../equipar.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="../en/equipar.html" hreflang="en" lang="en">EN</a><a href="equipar.html" hreflang="es" lang="es" aria-current="true">ES</a></nav>
+<button type="button" class="theme-toggle" id="tema" aria-pressed="false" aria-label="Activar tema oscuro" title="Activar tema oscuro" data-escuro="Activar tema oscuro" data-claro="Activar tema claro"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div>
 </div>
 <nav class="main-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="index.html#medir">Ciclo MEDIR</a><a href="modelos.html">Plantillas</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
 </header>
@@ -108,5 +112,6 @@
 <p class="origin-foot">Derivado del harness MEDIR, de Teco Sodré: <a href="https://github.com/tecosodreaboutdigital/harness-medir">github.com/tecosodreaboutdigital/harness-medir</a> (serie en <a href="https://tecosodreaboutdigital.github.io/harness-medir/">tecosodreaboutdigital.github.io/harness-medir</a>).</p>
 <p>Código e historial en <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">el repositorio</a>. Conversación sobre el tema en la <a href="index.html#ais">comunidad A.I.S.</a>, en WhatsApp.</p>
 </div></footer>
+<script>(function(){var b=document.getElementById('tema'),h=document.documentElement,m=document.querySelector('meta[name="theme-color"]');if(!b)return;function sync(){var d=h.getAttribute('data-theme')==='dark',l=d?b.getAttribute('data-claro'):b.getAttribute('data-escuro');b.setAttribute('aria-pressed',d?'true':'false');b.setAttribute('aria-label',l);b.title=l;if(m)m.setAttribute('content',d?'#0b1a2c':'#f6f8fb');}b.addEventListener('click',function(){var d=h.getAttribute('data-theme')!=='dark';if(d){h.setAttribute('data-theme','dark');}else{h.removeAttribute('data-theme');}try{localStorage.setItem('hms:tema',d?'escuro':'claro');}catch(e){}sync();});sync();})();</script>
 </body>
 </html>

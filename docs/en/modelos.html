@@ -7,7 +7,7 @@
 <meta name="description" content="Five one-page templates to copy: task contract, control level with the Lock, prompt with harness, pre-launch checklist, and sensors with the minimum record for every alert.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Teco Sodré">
-<meta name="theme-color" content="#0b1a2c">
+<meta name="theme-color" content="#f6f8fb">
 <link rel="canonical" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/modelos.html">
 <link rel="alternate" hreflang="pt-BR" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/modelos.html">
 <link rel="alternate" hreflang="en" href="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/en/modelos.html">
@@ -35,6 +35,7 @@
 <meta name="twitter:description" content="Five one-page templates to copy: task contract, control level with the Lock, prompt with harness, pre-launch checklist, and sensors with the minimum record for every alert.">
 <meta name="twitter:image" content="https://tecosodreaboutdigital.github.io/harness-medir-seguranca/assets/og.jpg">
 <meta name="twitter:image:alt" content="The MEDIR harness for security operations: the alert is a hypothesis, the operator confirms.">
+<script>(function(){var h=document.documentElement;h.className+=' js';try{if(localStorage.getItem('hms:tema')==='escuro'){h.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap">
@@ -45,7 +46,10 @@
 <header class="site-header">
 <div class="bar">
 <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>MEDIR<span class="brand-sep">/</span>security</span></a>
+<div class="tools">
 <nav class="lang" aria-label="Language"><a href="../modelos.html" hreflang="pt-BR" lang="pt-BR">PT</a><a href="modelos.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/modelos.html" hreflang="es" lang="es">ES</a></nav>
+<button type="button" class="theme-toggle" id="tema" aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme" data-escuro="Switch to dark theme" data-claro="Switch to light theme"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div>
 </div>
 <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#medir">MEDIR cycle</a><a href="modelos.html" aria-current="page">Templates</a><a href="skills.html">Skills</a><a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">GitHub</a></nav>
 </header>
@@ -260,5 +264,6 @@ infrastructure failure involved (yes or no)</code></pre>
 <p class="origin-foot">Derived from the MEDIR harness by Teco Sodré: <a href="https://github.com/tecosodreaboutdigital/harness-medir">github.com/tecosodreaboutdigital/harness-medir</a> (series at <a href="https://tecosodreaboutdigital.github.io/harness-medir/">tecosodreaboutdigital.github.io/harness-medir</a>).</p>
 <p>Source and history in <a href="https://github.com/tecosodreaboutdigital/harness-medir-seguranca">the repository</a>. Conversation on the topic in the <a href="index.html#ais">A.I.S. community</a>, on WhatsApp.</p>
 </div></footer>
+<script>(function(){var b=document.getElementById('tema'),h=document.documentElement,m=document.querySelector('meta[name="theme-color"]');if(!b)return;function sync(){var d=h.getAttribute('data-theme')==='dark',l=d?b.getAttribute('data-claro'):b.getAttribute('data-escuro');b.setAttribute('aria-pressed',d?'true':'false');b.setAttribute('aria-label',l);b.title=l;if(m)m.setAttribute('content',d?'#0b1a2c':'#f6f8fb');}b.addEventListener('click',function(){var d=h.getAttribute('data-theme')!=='dark';if(d){h.setAttribute('data-theme','dark');}else{h.removeAttribute('data-theme');}try{localStorage.setItem('hms:tema',d?'escuro':'claro');}catch(e){}sync();});sync();})();</script>
 </body>
 </html>
